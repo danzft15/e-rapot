@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="navbar-header pull-right">
-					<a href="logout.php" class="navbar-brand">
+					<a href="../action/proses_logout.php" class="navbar-brand">
 						<small>
 							<span class="glyphicon">&#xe017;</span>
 							<font size="4">
@@ -161,24 +161,24 @@
 
 			<?php
 
-				// if ($page == "siswa_kelas7") {
-				// 		include "data/siswa_7.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas8") {
-				// 		include "data/siswa_8.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas9") {
-				// 		include "data/siswa_9.php";
-				// 	}
-				// 	elseif ($page =="guru") {
-				// 		include "data/guru.php";
-				// 	}
-				// 	elseif ($page == "pelajaran") {
-				// 		include "data/pelajaran.php";
-				// 	}
-				// 	elseif ($page == "inputnilai") {
-				// 		include "input_nilai.php";
-				// 	}
+				if ($page == "siswa_kelas7") {
+						include "siswa/siswa_7.php";
+					}
+					elseif ($page =="siswa_kelas8") {
+						include "siswa/siswa_8.php";
+					}
+					elseif ($page =="siswa_kelas9") {
+						include "siswa/siswa_9.php";
+					}
+					elseif ($page =="guru") {
+						include "siswa/guru.php";
+					}
+					elseif ($page == "pelajaran") {
+						include "siswa/pelajaran.php";
+					}
+					elseif ($page == "inputnilai") {
+						include "input_nilai.php";
+					}
 			?>
 			</div><!-- /.main-content -->
 

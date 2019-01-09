@@ -32,7 +32,7 @@
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
 		 	
-		 	header('location: halaman_siswa.php');
+		 	header('location: ../siswa/index.php');
 		}
 		elseif ($level==2) {
 		 	// jika Username dan password ada didalam database daftarkan session
@@ -41,7 +41,7 @@
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
 		 	
-		 	header('location: halaman_wali_murid.php');
+		 	header('location: ../walimurid/index.php');
 		}  
 
 		elseif ($level==3) {
@@ -52,7 +52,7 @@
 		 		$_SESSION['level']     = $level;
 		 		$_SESSION['id']        = session_id();
 		 	
-		 		header('location: halaman_wali_kelas_8.php');
+		 		header('location: ../walikelas/halaman_wali_kelas_8.php');
 		 	}
 		 	if ($keterangan=='b'){
 		 		session_start();
@@ -81,7 +81,7 @@
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
 		 	
-		 	header('location: halaman_wali_kelas_9.php');
+		 	header('location: ../walikelas/halaman_wali_kelas_9.php');
 		} 
 
 		elseif ($level==5) {
@@ -91,7 +91,7 @@
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
 		 	
-		 	header('location: halaman_wali_kelas_7.php');
+		 	header('../walikelas/halaman_wali_kelas_7.php');
 		} 
  
 	}

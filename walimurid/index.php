@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>Mts.Ziyadatul Huda</title>
-		<link rel="shortcut icon" href="../img/logo_zihud.jpg">
+		<link rel="shortcut icon" href="img/logo_zihud.jpg">
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -38,7 +38,7 @@
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="../assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
@@ -66,7 +66,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="halaman_wali_kelas_7.php" class="navbar-brand">
+					<a href="halaman_siswa.php" class="navbar-brand">
 						<small>
 							<i class="fa fa-home"></i>
 							Mts-Ziyadatul Huda
@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="navbar-header pull-right">
-					<a href="logout.php" class="navbar-brand">
+					<a href="../action/proses_logout.php" class="navbar-brand">
 						<small>
 							<span class="glyphicon">&#xe017;</span>
 							<font size="4">
@@ -99,23 +99,11 @@
 				<ul class="nav nav-list">
 
 					<li class="active open">
-
-						<b class="arrow"></b>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-				</ul><!-- /.nav-list -->
-
-				<ul class="nav nav-list">
-
-					<li class="active open">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-o"></i>
 
 							<span class="menu-text">
-								Input Nilai
+								Data Master
 								<span class="badge badge-primary"></span>
 							</span>
 
@@ -125,13 +113,16 @@
 						<b class="arrow"></b>
 
 						<ul class="submenu">
-
 							<li class="active">
-								<a href="?page=siswa_kelas7" class="dropdo">
+								<a href="#">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Data Siswa Kelas 7
-									</span>
+									Lihat Nilai
 								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -153,7 +144,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="home.php">Welcome Wali Kelas 7</a>
+								<a href="#">Welcome Walimurid</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -170,24 +161,24 @@
 
 			<?php
 
-				// if ($page == "siswa_kelas7") {
-				// 		include "data/siswa_7.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas8") {
-				// 		include "data/siswa_8.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas9") {
-				// 		include "data/siswa_9.php";
-				// 	}
-				// 	elseif ($page =="guru") {
-				// 		include "data/guru.php";
-				// 	}
-				// 	elseif ($page == "pelajaran") {
-				// 		include "data/pelajaran.php";
-				// 	}
-				// 	elseif ($page == "inputnilai") {
-				// 		include "input_nilai.php";
-				// 	}
+				if ($page == "siswa_kelas7") {
+						include "siswa/siswa_7.php";
+					}
+					elseif ($page =="siswa_kelas8") {
+						include "siswa/siswa_8.php";
+					}
+					elseif ($page =="siswa_kelas9") {
+						include "siswa/siswa_9.php";
+					}
+					elseif ($page =="guru") {
+						include "siswa/guru.php";
+					}
+					elseif ($page == "pelajaran") {
+						include "siswa/pelajaran.php";
+					}
+					elseif ($page == "inputnilai") {
+						include "input_nilai.php";
+					}
 			?>
 			</div><!-- /.main-content -->
 

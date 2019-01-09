@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>Mts.Ziyadatul Huda</title>
-		<link rel="shortcut icon" href="img/logo_zihud.jpg">
+		<link rel="shortcut icon" href="../img/logo_zihud.jpg">
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -66,7 +66,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="halaman_admin.php" class="navbar-brand">
+					<a href="../admin/index.php" class="navbar-brand">
 						<small>
 							<i class="fa fa-home"></i>
 							Mts-Ziyadatul Huda
@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="navbar-header pull-right">
-					<a href="logout.php" class="navbar-brand">
+					<a href="../action/proses_logout.php" class="navbar-brand">
 						<small>
 							<span class="glyphicon">&#xe017;</span>
 							<font size="4">
@@ -209,7 +209,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="home.php">Welcome!</a>
+								<a href="home.php">Welcome Admin</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 						<div class="nav-search" id="nav-search">
@@ -225,27 +225,28 @@
 
 			<?php
 
-				// if ($page == "siswa_kelas7") {
-				// 		include "data/siswa_7.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas8") {
-				// 		include "data/siswa_8.php";
-				// 	}
-				// 	elseif ($page =="siswa_kelas9") {
-				// 		include "data/siswa_9.php";
-				// 	}
-				// 	elseif ($page =="guru") {
-				// 		include "data/guru.php";
-				// 	}
-				// 	elseif ($page == "pelajaran") {
-				// 		include "data/pelajaran.php";
-				// 	}
-				// 	elseif ($page == "inputnilai") {
-				// 		include "input_nilai.php";
-				// 	}
-				// 	elseif ($page == "manajemenguru") {
-				// 		include "manajemen_guru.php";
-				// 	}
+				if ($page == "siswa_kelas7") {
+						include "../siswa/siswa_7.php";
+					}
+					elseif ($page =="siswa_kelas8") {
+						include "../siswa/siswa_8.php";
+					}
+					elseif ($page =="siswa_kelas9") {
+						include "../siswa/siswa_9.php";
+					}
+					elseif ($page =="guru") {
+						include "../walikelas/guru.php";
+					}
+					elseif ($page == "pelajaran") {
+						include "../walikelas/pelajaran.php";
+					}
+					elseif ($page == "inputnilai") {
+						include "input_nilai.php";
+					}
+					elseif ($page =="manajemenguru") {
+						include "../walikelas/manajemen_guru.php";
+					}
+
 			?>
 			</div><!-- /.main-content -->
 
