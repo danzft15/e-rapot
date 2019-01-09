@@ -121,7 +121,14 @@
 
 								<b class="arrow"></b>
 							</li>
+							<li class="active">
+								<a href="?page=siswa">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Data Siswa
+								</a>
 
+								<b class="arrow"></b>
+							</li>
 							<li class="active">
 								<a href="?page=pelajaran">
 									<i class="menu-icon fa fa-caret-right"></i>
@@ -164,7 +171,7 @@
 							<li class="active">
 								<a href="?page=siswa_kelas7" class="dropdo">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Data Siswa Kelas 7
+									Kelas 7
 									</span>
 								</a>
 								<b class="arrow"></b>
@@ -173,7 +180,7 @@
 							<li class="active">
 								<a href="?page=siswa_kelas8" class="dropdo">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Data Siswa Kelas 8
+									Kelas 8
 									</span>
 								</a>
 								<b class="arrow"></b>
@@ -182,7 +189,7 @@
 							<li class="active">
 								<a href="?page=siswa_kelas9" class="dropdo">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Data Siswa Kelas 9
+									Kelas 9
 									</span>
 								</a>
 								<b class="arrow"></b>
@@ -236,6 +243,12 @@
 					}
 					elseif ($page =="guru") {
 						include "../walikelas/guru.php";
+					}
+					elseif ($page =="siswa") {
+						include "siswa.php";
+					}
+					elseif ($page =="tambah_siswa") {
+						include "tambah_siswa.php";
 					}
 					elseif ($page == "pelajaran") {
 						include "../walikelas/pelajaran.php";
