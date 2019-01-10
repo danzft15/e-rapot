@@ -70,7 +70,7 @@
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
 						<input type="submit" name="add" class="btn btn-primary" value="TAMBAH">
-						<a href="../admin/index.php?page=guru" class="btn btn-warning">BATAL</a>
+						<a href="/admin/index.php?page=manajemenguru" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>
 			</form>
