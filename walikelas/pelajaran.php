@@ -7,6 +7,7 @@
  				
 					<th>NO.</th>
 					<th>MATA PELAJARAN</th>
+					
 
 	</tr>
 	<?php $urut = (isset($_GET['urut']) ? strtolower($_GET['urut']) : NULL);  ?>
@@ -24,7 +25,8 @@
 						echo '
 						<tr>
 							<td>'.$no.'</td>
-							<td>'.$row['nama_mapel'].'</td>';
+							<td>'.$row['mata_pelajaran'].
+							'</td>';
 						$no++;
 					}
 				}
