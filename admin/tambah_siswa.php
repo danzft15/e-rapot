@@ -14,29 +14,8 @@
 		<div class="content">
 			<h2>Tambah Data Siswa</h2>
 			<hr />
-			
-			<?php
-			if(isset($_POST['add'])){
-				$nisn					= $_POST['nisn'];
-				$nis					= $_POST['nis'];
-				$nama_lengkap			= $_POST['nama_lengkap'];
-				$tempat_lahir			= $_POST['tempat_lahir'];
-				$tanggal_lahir			= $_POST['tanggal_lahir'];
-				$jenis_kelamin			= $_POST['jenis_kelamin'];
-				$kelas					= $_POST['kelas'];
-				$alamat					= $_POST['alamat'];
-				$provinsi   			= $_POST['provinsi'];
-				$status_siswa			= $_POST['status_siswa'];
-		
-				$cek = mysqli_query($koneksi, "SELECT * FROM siswa");
-				if(mysqli_num_rows($cek) == 0){
-						$insert = mysqli_query($koneksi, "INSERT INTO siswa(id, nisn, nis, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, kelas, alamat, provinsi, status_siswa)
-															VALUES('', '$nisn', '$nis', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$kelas', '$alamat', '$provinsi', '$status_siswa')") or die(mysqli_error($koneksi));
-												}
-											}
-			?>
-			
-			<form class="form-horizontal" action="" method="post">
+						
+			<form class="form-horizontal" action="../action/tambah_siswa.php" method="post">
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NISN</label>
 						<div class="col-sm-3">
@@ -58,13 +37,13 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">TEMPAT LAHIR</label>
 						<div class="col-sm-3">
-							<input type="text" name="tempat_lahir" class="form-control" placeholder="TEMPAT LAHIR">
+							<input type="tedxt" name="tempat_lahir" class="form-control" placeholder="TEMPAT LAHIR">
 						</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">TANGGAL LAHIR</label>
 						<div class="col-sm-3">
-							<input type="text" name="tanggal_lahir" class="form-control" placeholder="TANGGAL LAHIR">
+							<input type="date" name="tanggal_lahir" class="form-control" placeholder="TANGGAL LAHIR">
 						</div>
 				</div>
 				<div class="form-group">
@@ -111,7 +90,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" name="add" class="btn btn-primary" value="TAMBAH">
+						<input type="submit" class="btn btn-primary" value="TAMBAH">
 						<a href="../admin/index.php?page=siswa" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>
