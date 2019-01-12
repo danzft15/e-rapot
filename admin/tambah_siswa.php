@@ -60,9 +60,9 @@
 					<label class="col-sm-3 control-label">KELAS</label>
 					<div class="col-sm-1">
 						<select name="kelas" class="form-control">
-							<option value="">7</option>
-							<option value="laki-laki">8</option>
-							<option value="perempuan">9</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
 						</select>
 					</div>
 				</div>
