@@ -10,22 +10,22 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>Mts.Ziyadatul Huda</title>
-		<link rel="shortcut icon" href="img/logo_zihud.jpg">
+		<link rel="shortcut icon" href="../img/logo_zihud.jpg">
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
@@ -171,13 +171,13 @@
 			<?php
 
 				if ($page == "siswa_kelas7") {
-						include "data/siswa_7.php";
+						include "../admin/siswa_7.php";
 					}
 					elseif ($page =="siswa_kelas8") {
-						include "data/siswa_8.php";
+						include "../admin/siswa_8.php";
 					}
 					elseif ($page =="siswa_kelas9") {
-						include "data/siswa_9.php";
+						include "../admin/siswa_9.php";
 					}
 					elseif ($page =="guru") {
 						include "data/guru.php";

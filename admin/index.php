@@ -233,31 +233,31 @@
 			<?php
 
 				if ($page == "siswa_kelas7") {
-						include "../siswa/siswa_7.php";
+						include "../admin/siswa_7.php";
 					}
 					elseif ($page =="siswa_kelas8") {
-						include "../siswa/siswa_8.php";
+						include "../admin/siswa_8.php";
 					}
 					elseif ($page =="siswa_kelas9") {
-						include "../siswa/siswa_9.php";
+						include "../admin/siswa_9.php";
 					}
 					elseif ($page =="guru") {
-						include "../walikelas/guru.php";
+						include "../admin/guru.php";
 					}
 					elseif ($page =="siswa") {
-						include "siswa.php";
+						include "../admin/siswa.php";
 					}
 					elseif ($page =="tambah_siswa") {
-						include "tambah_siswa.php";
+						include "../action/tambah_siswa.php";
 					}
 					elseif ($page == "pelajaran") {
 						include "../walikelas/pelajaran.php";
 					}
 					elseif ($page == "inputnilai") {
-						include "input_nilai.php";
+						include "../action/input_nilai.php";
 					}
 					elseif ($page =="manajemenguru") {
-						include "../walikelas/manajemen_guru.php";
+						include "../action/manajemen_guru.php";
 					}
 
 			?>

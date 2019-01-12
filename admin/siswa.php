@@ -1,7 +1,7 @@
 <?php
  include "../action/koneksi.php";
  ?>
- <a href="tambah_siswa.php?page=tambah_siswa" class="btn btn-info btn-lg">
+ <a href="../action/tambah_siswa.php?page=tambah_siswa" class="btn btn-info btn-lg">
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
  <div class="table-responsive">
@@ -48,8 +48,8 @@
 							<td>'.$row['provinsi'].'</td>
 							<td>'.$row['status_siswa'].'</td>
 							<td>
-								<a href="../admin/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
-								<a href="../admin/hapus_siswa.php?aksi=delete&nisn='.$row['nisn'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+								<a href="../action/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
+								<a href="../action/hapus_siswa.php?aksi=delete&nisn='.$row['nisn'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 							</td>
 							<td>';
 
