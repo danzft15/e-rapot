@@ -23,7 +23,7 @@
 			$_SESSION['keterangan']     = $keterangan;
 			$_SESSION['id']        = session_id();
 			
-			header('location: ../admin/index.php');
+			header('location: ../admin/index.php?page=guru');
 		}
 		elseif ($level==1) {
 		 	// jika Username dan password ada didalam database daftarkan session

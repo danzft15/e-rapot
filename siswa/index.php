@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>Mts.Ziyadatul Huda</title>
-		<link rel="shortcut icon" href="img/logo_zihud.jpg">
+		<link rel="shortcut icon" href="../img/logo_zihud.jpg">
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -66,7 +66,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="halaman_siswa.php" class="navbar-brand">
+					<a href="../siswa/index.php" class="navbar-brand">
 						<small>
 							<i class="fa fa-home"></i>
 							Mts-Ziyadatul Huda
