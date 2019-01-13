@@ -1,7 +1,7 @@
 <?php
  include "../action/koneksi.php";
  ?>
- <a href="../action/tambah_siswa.php?page=tambah_siswa" class="btn btn-info btn-lg">
+ <a href="../admin/tambah_siswa.php?page=tambah_siswa" class="btn btn-info btn-lg">
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
  <div class="table-responsive">

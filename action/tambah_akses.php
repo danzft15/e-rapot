@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Mts.Ziyadatul Huda</title>
-  <link rel="shortcut icon" href="img/logo_zihud.jpg">
+  <link rel="shortcut icon" href="../img/logo_zihud.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -70,7 +70,7 @@
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
 						<input type="submit" name="add" class="btn btn-primary" value="TAMBAH">
-						<a href="/admin/index.php?page=manajemenguru" class="btn btn-warning">BATAL</a>
+						<a href="../admin/index.php?page=manajemenguru" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>
 			</form>

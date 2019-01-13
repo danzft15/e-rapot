@@ -248,7 +248,7 @@
 						include "../admin/siswa.php";
 					}
 					elseif ($page =="tambah_siswa") {
-						include "../action/tambah_siswa.php";
+						include "../admin/tambah_siswa.php";
 					}
 					elseif ($page == "pelajaran") {
 						include "../walikelas/pelajaran.php";
