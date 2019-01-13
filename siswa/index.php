@@ -1,8 +1,13 @@
 <?php
-	include "../action/koneksi.php";
 
-	if(isset($_GET['page'])) $page = $_GET['page']; 
-		    else $page = "index";
+	session_start();
+
+	if(isset($_SESSION['username'])) {
+
+		include "../action/koneksi.php";
+
+		if(isset($_GET['page'])) $page = $_GET['page']; 
+				    else $page = "index";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -144,7 +149,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Welcome Siswa!</a>
+								<a href="#">Welcome <?php echo $_SESSION['username'] ?>!</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -161,24 +166,27 @@
 
 			<?php
 
-				if ($page == "siswa_kelas7") {
-						include "siswa/siswa_7.php";
-					}
-					elseif ($page =="siswa_kelas8") {
-						include "siswa/siswa_8.php";
-					}
-					elseif ($page =="siswa_kelas9") {
-						include "siswa/siswa_9.php";
-					}
-					elseif ($page =="guru") {
-						include "siswa/guru.php";
-					}
-					elseif ($page == "pelajaran") {
-						include "siswa/pelajaran.php";
-					}
-					elseif ($page == "inputnilai") {
-						include "input_nilai.php";
-					}
+				if ($page == 'index'){
+					include 'dashboard_siswa.php';
+				}
+				// if ($page == "siswa_kelas7") {
+				// 		include "siswa/siswa_7.php";
+				// 	}
+				// 	elseif ($page =="siswa_kelas8") {
+				// 		include "siswa/siswa_8.php";
+				// 	}
+				// 	elseif ($page =="siswa_kelas9") {
+				// 		include "siswa/siswa_9.php";
+				// 	}
+				// 	elseif ($page =="guru") {
+				// 		include "siswa/guru.php";
+				// 	}
+				// 	elseif ($page == "pelajaran") {
+				// 		include "siswa/pelajaran.php";
+				// 	}
+				// 	elseif ($page == "inputnilai") {
+				// 		include "input_nilai.php";
+				// 	}
 			?>
 			</div><!-- /.main-content -->
 
@@ -232,4 +240,11 @@
 
 		<!-- inline scripts related to this page -->
 	</body>
-</html>
+</html>	
+<?php
+}
+else
+  {
+    header("location:../index.php");
+  }
+?>

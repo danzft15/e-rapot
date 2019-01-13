@@ -20,7 +20,7 @@
 			session_start();
 			$_SESSION['username']  = $username;
 			$_SESSION['level']     = $level;
-			$_SESSION['keterangan']     = $keterangan;
+			$_SESSION['keterangan']= $keterangan;
 			$_SESSION['id']        = session_id();
 			
 			header('location: ../admin/index.php?page=guru');
