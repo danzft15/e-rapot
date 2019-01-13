@@ -5,7 +5,7 @@
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
  <div class="table-responsive">
- 		<table class="table table-striped table-hover">
+ 		<table class="table table-bordered" id="" width="100%" cellspacing="0">
  	<tr>
  				
 					<th><center>NO.</th>

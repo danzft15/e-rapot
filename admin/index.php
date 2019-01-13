@@ -146,6 +146,15 @@
 
 								<b class="arrow"></b>
 							</li>
+
+							<li class="active">
+								<a href="?page=cobarapot">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Coba View Rapot
+								</a>
+
+								<b class="arrow"></b>
+							</li>
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
@@ -259,6 +268,10 @@
 					elseif ($page =="manajemenguru") {
 						include "../action/manajemen_guru.php";
 					}
+					elseif ($page =="cobarapot") {
+						include "../admin/coba_rapot.php";
+					}
+
 
 			?>
 			</div><!-- /.main-content -->

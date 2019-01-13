@@ -2,7 +2,7 @@
  include "../action/koneksi.php";
  ?>
  <<div class="table-responsive">
- 		<table class="table table-striped table-hover">
+ 		<table class="table table-bordered" id="" width="100%" cellspacing="0">
  	<tr>
  				
 					<th>NO.</th>

@@ -5,7 +5,7 @@
  <a href="../action/tambah_akses.php" class="btn btn-info btn-lg">
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
- 		<table class="table table-striped table-hover">
+ 		<table class="table table-bordered" id="" width="100%" cellspacing="0">
  	<tr>
  				
 					<th><center>NO.</th>

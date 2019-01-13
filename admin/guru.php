@@ -6,7 +6,7 @@
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
 
- 		<table class="table table-striped table-hover">
+ 		<table class="table table-bordered" id="" width="100%" cellspacing="0">
  	<tr>
  				
 					<th><center>NO.</th>
@@ -48,7 +48,7 @@
 							<td>'.$row['status_pegawai'].'</td>
 							<td>'.$row['mata_pelajaran'].'</td>
 							<td>'.$row['status'].'</td>
-							<td><a href="edit_guru.php?nuptk='.$row['nuptk'].'" title="Rubah Data"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+							<td><a href="edit_guru.php?NUPTK='.$row['nuptk'].'" title="Rubah Data"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
 								<a href="hapus_guru.php?aksi=delete&nuptk='.$row['nuptk'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
 							<td>';
 

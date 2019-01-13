@@ -2,7 +2,7 @@
  include "../action/koneksi.php";
  ?>
  <<div class="table-responsive">
- 		<table class="table table-striped table-hover">
+ 		<table class="table table-bordered" id="" width="100%" cellspacing="0">
  	<tr>
  				
 					<th><center>NO.</th>
@@ -43,16 +43,14 @@
 							<td>'.$row['kelas'].'</td>
 							<td>'.$row['alamat'].'</td>
 							<td>'.$row['provinsi'].'</td>
-							<td>'.$row['status_siswa'].'</td>
-							<td>
-								<a href="../action/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
-								<a href="../action/hapus_siswa.php?aksi=delete&nisn='.$row['nisn'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
-							</td>
-							<td>';
-
+							<td>'.$row['status_siswa'].'</td>';
+							
 						echo '
 							</td>
-
+							<td>
+								<a href="../action/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
+								<a href="../action/hapus_siswa.php?aksi=delete&id='.$row['id'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+							</td>
 						</tr>
 						';
 						$no++;

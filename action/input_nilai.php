@@ -43,7 +43,7 @@ include "../action/koneksi.php";
 				$mata_pelajaran		= $_POST['mata_pelajaran'];
 				$kkm				= $_POST['kkm'];
 				$nilai_angka		= $_POST['nilai_angka'];
-				$huruf				= $_POST['nilaihuruf'];
+				$huruf				= $_POST['nilai_huruf'];
 				$predikat			= $_POST['predikat'];
 				$keterangan			= $_POST['keterangan'];
 				$deskripsi			= $_POST['deskripsi'];
