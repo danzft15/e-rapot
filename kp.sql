@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2019 at 04:15 PM
+-- Generation Time: Jan 13, 2019 at 07:55 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -68,10 +68,45 @@ CREATE TABLE `input_nilai` (
   `id_siswa` int(10) NOT NULL,
   `kelas` int(5) NOT NULL,
   `semester` varchar(10) NOT NULL,
-  `mata_pelajaran` varchar(40) NOT NULL,
-  `kkm` int(10) NOT NULL,
-  `nilai_angka` int(10) NOT NULL,
-  `nilai_huruf` varchar(40) NOT NULL,
+  `pai` int(5) NOT NULL,
+  `pai_huruf` varchar(30) NOT NULL,
+  `kkm_pai` int(5) NOT NULL,
+  `bindo` int(5) NOT NULL,
+  `bindo_huruf` varchar(30) NOT NULL,
+  `kkm_bindo` int(5) NOT NULL,
+  `binggris` int(5) NOT NULL,
+  `binggris_huruf` int(30) NOT NULL,
+  `kkm_binggris` int(5) NOT NULL,
+  `barab` int(5) NOT NULL,
+  `barab_huruf` int(30) NOT NULL,
+  `kkm_barab` int(5) NOT NULL,
+  `matematika` int(5) NOT NULL,
+  `matematika_huruf` varchar(30) NOT NULL,
+  `kkm_matematika` int(5) NOT NULL,
+  `ipa` int(5) NOT NULL,
+  `ipa_huruf` varchar(30) NOT NULL,
+  `kkm_ipa` int(5) NOT NULL,
+  `ips` int(5) NOT NULL,
+  `ips_huruf` varchar(30) NOT NULL,
+  `kkm_ips` int(5) NOT NULL,
+  `aqidah` int(5) NOT NULL,
+  `aqidah_huruf` varchar(30) NOT NULL,
+  `kkm_aqidah` int(5) NOT NULL,
+  `fiqih` int(5) NOT NULL,
+  `fiqih_huruf` varchar(30) NOT NULL,
+  `kkm_fiqih` int(5) NOT NULL,
+  `qurdis` int(5) NOT NULL,
+  `qurdis_huruf` varchar(30) NOT NULL,
+  `kkm_qurdis` int(5) NOT NULL,
+  `ski` int(5) NOT NULL,
+  `ski_huruf` varchar(30) NOT NULL,
+  `kkm_ski` int(5) NOT NULL,
+  `senbud` int(5) NOT NULL,
+  `senbud_huruf` varchar(30) NOT NULL,
+  `kkm_senbud` int(5) NOT NULL,
+  `penjaskes` int(5) NOT NULL,
+  `penjaskes_huruf` varchar(30) NOT NULL,
+  `kkm_penjaskes` int(5) NOT NULL,
   `predikat` varchar(10) NOT NULL,
   `keterangan` varchar(30) NOT NULL,
   `deskripsi` varchar(100) NOT NULL,
@@ -80,18 +115,6 @@ CREATE TABLE `input_nilai` (
   `izin` int(5) NOT NULL,
   `alfa` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `input_nilai`
---
-
-INSERT INTO `input_nilai` (`id`, `id_siswa`, `kelas`, `semester`, `mata_pelajaran`, `kkm`, `nilai_angka`, `nilai_huruf`, `predikat`, `keterangan`, `deskripsi`, `budi_pekerti`, `sakit`, `izin`, `alfa`) VALUES
-(1, 0, 0, '', '', 70, 0, '', 'a', '', 'A', '', 0, 0, 0),
-(2, 0, 0, '', 'pai', 70, 80, 'Delapan Puluh', 'a', 'Terlampaui', 'abc', '', 0, 0, 0),
-(3, 0, 0, '', 'binggris', 70, 80, 'Delapan Puluh', 'b', 'Tidak Terlampaui', 'k', '', 0, 0, 0),
-(4, 4, 0, '', 'matematika', 70, 80, 'Delapan Puluh', 'b', 'Terlampaui', 'asd', '', 0, 0, 0),
-(5, 7, 0, '', 'bindo', 70, 75, 'Tujuh Puluh Lima', 'b', 'Terlampaui', 'Test', '', 0, 0, 0),
-(6, 4, 0, '', 'fiqih', 75, 80, 'Delapan Puluh', 'a', 'Terlampaui', 'Test 2', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -102,7 +125,7 @@ INSERT INTO `input_nilai` (`id`, `id_siswa`, `kelas`, `semester`, `mata_pelajara
 CREATE TABLE `login` (
   `id` int(10) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `level` int(10) NOT NULL,
   `keterangan` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -118,8 +141,8 @@ INSERT INTO `login` (`id`, `username`, `password`, `level`, `keterangan`) VALUES
 (4, 'walikelas8a', '4be5a293b3b9bf302d726d386062cd77', 3, 'a'),
 (5, 'walikelas9', '6e7ff666af42bea2120299a541ab715a', 4, 'walikelas9'),
 (6, 'walikelas7', '6462d52a53b60aa78f2e6bc102c558de', 5, 'walikelas7'),
-(7, 'a', '0cc175b9c0f1b6a831c399e269772661', 3, 'c'),
-(8, 'a', '0cc175b9c0f1b6a831c399e269772661', 5, 'a');
+(15, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa'),
+(16, '121231750038160455', '639b5e4e626a20117c79441e2d09a0a0', 1, 'siswa');
 
 -- --------------------------------------------------------
 
@@ -137,7 +160,7 @@ CREATE TABLE `mata_pelajaran` (
 --
 
 INSERT INTO `mata_pelajaran` (`id`, `mata_pelajaran`) VALUES
-(1, 'Pendidikann Agama Islam (PAI)'),
+(1, 'Pendidikan Agama Islam (PAI)'),
 (2, 'Bahasa Indonesia'),
 (3, 'Bahasa Inggris'),
 (4, 'Bahasa Arab'),
@@ -159,9 +182,9 @@ INSERT INTO `mata_pelajaran` (`id`, `mata_pelajaran`) VALUES
 
 CREATE TABLE `siswa` (
   `id` int(5) NOT NULL,
-  `nisn` int(10) NOT NULL,
+  `nisn` varchar(10) NOT NULL,
   `nis` varchar(20) NOT NULL,
-  `nama_lengkap` varchar(50) NOT NULL,
+  `nama_siswa` varchar(50) NOT NULL,
   `tempat_lahir` varchar(50) NOT NULL,
   `tanggal_lahir` varchar(50) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
@@ -175,16 +198,18 @@ CREATE TABLE `siswa` (
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_lengkap`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas`, `alamat`, `provinsi`, `status_siswa`) VALUES
-(1, 24671709, '121231750038150437', 'FEBRILIYANTI', 'JAKARTA', '06/02/2003', 'PEREMPUAN', 8, 'JL. SWAKARSA IV RT 009/03, PONDOK KELAPA\r\n', 'DKI Jakarta', 'AKTIF'),
-(2, 26276901, '121231750038150438', 'IKHSAN FATHAN RAMADANI', 'BEKASI', '23/11/2002', 'LAKI-LAKI', 8, 'JL. PONDOK KELAPA NO. 17B\r\n', 'DKI Jakarta', 'AKTIF'),
-(3, 4743122, '121231750038150439', 'JIHAN NURDINI ROHMAH', 'JAKARTA', '25/09/2000', 'PEREMPUAN', 8, 'JL. MELATI II RT 004/02\r\n', 'Jawa Barat', 'AKTIF'),
-(4, 2508611, '121231750038140410', 'FAJAR MEI SYAFRUDIN', 'BANJARNEGARA', '24/05/2000', 'LAKI-LAKI', 9, 'JL. PONDOK KELAPA SELATAN RT. 010/05 NO. 09\r\n', 'DKI Jakarta', 'AKTIF'),
-(5, 18369538, '121231750038140411', 'FARHAN MUZAKI', 'BEKASI', '22/12/2001', 'LAKI-LAKI', 9, 'JL. H. NADIH NO. 07 RT. 003/02', 'JAWA BARAT', 'AKTIF'),
-(6, 21218788, '121231750038140414', 'KHAIRUL ALWAN ALBALDAN', 'JAKARTA', '19/01/2002', 'LAKI-LAKI', 9, 'JL.MASJID I RT 005/12 NO.35B', 'DKI Jakarta', 'AKTIF'),
-(7, 37714990, '121231750038160452', 'ANNISA ROKHIMAH', 'Karanganyar', '20/05/2003', 'PEREMPUAN', 7, 'JL . Pondok Kelapa ', 'DKI Jakarta', 'AKTIF'),
-(8, 48692792, '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF'),
-(9, 5127895, '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF');
+INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_siswa`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas`, `alamat`, `provinsi`, `status_siswa`) VALUES
+(1, '24671709', '121231750038150437', 'FEBRILIYANTI', 'JAKARTA', '06/02/2003', 'PEREMPUAN', 8, 'JL. SWAKARSA IV RT 009/03, PONDOK KELAPA\r\n', 'DKI Jakarta', 'AKTIF'),
+(2, '26276901', '121231750038150438', 'IKHSAN FATHAN RAMADANI', 'BEKASI', '23/11/2002', 'LAKI-LAKI', 8, 'JL. PONDOK KELAPA NO. 17B\r\n', 'DKI Jakarta', 'AKTIF'),
+(3, '4743122', '121231750038150439', 'JIHAN NURDINI ROHMAH', 'JAKARTA', '25/09/2000', 'PEREMPUAN', 8, 'JL. MELATI II RT 004/02\r\n', 'Jawa Barat', 'AKTIF'),
+(4, '2508611', '121231750038140410', 'FAJAR MEI SYAFRUDIN', 'BANJARNEGARA', '24/05/2000', 'LAKI-LAKI', 9, 'JL. PONDOK KELAPA SELATAN RT. 010/05 NO. 09\r\n', 'DKI Jakarta', 'AKTIF'),
+(5, '18369538', '121231750038140411', 'FARHAN MUZAKI', 'BEKASI', '22/12/2001', 'LAKI-LAKI', 9, 'JL. H. NADIH NO. 07 RT. 003/02', 'JAWA BARAT', 'AKTIF'),
+(6, '21218788', '121231750038140414', 'KHAIRUL ALWAN ALBALDAN', 'JAKARTA', '19/01/2002', 'LAKI-LAKI', 9, 'JL.MASJID I RT 005/12 NO.35B', 'DKI Jakarta', 'AKTIF'),
+(7, '37714990', '121231750038160452', 'ANNISA ROKHIMAH', 'Karanganyar', '20/05/2003', 'PEREMPUAN', 7, 'JL . Pondok Kelapa ', 'DKI Jakarta', 'AKTIF'),
+(8, '48692792', '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF'),
+(9, '5127895', '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF'),
+(10, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '1998-04-07', 'laki-laki', 7, 'Jl. Serdang Raya', 'DKI Jakarta', 'laki-laki'),
+(11, '0041336362', '121231750038160455', 'DECKA ANDASTEFHANA', 'BEKASI', '2004-08-18', 'laki-laki', 7, 'HARAPAN JAYA RT 007/11 NO. 5', 'Kota Bekasi', 'laki-laki');
 
 --
 -- Indexes for dumped tables
@@ -234,7 +259,7 @@ ALTER TABLE `input_nilai`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `mata_pelajaran`
@@ -246,7 +271,7 @@ ALTER TABLE `mata_pelajaran`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

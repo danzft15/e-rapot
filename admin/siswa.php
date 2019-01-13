@@ -39,7 +39,7 @@
 							<td>'.$no.'</td>
 							<td>'.$row['nisn'].'</td>
 							<td>'.$row['nis'].'</td>
-							<td>'.$row['nama_lengkap'].'</td>
+							<td>'.$row['nama_siswa'].'</td>
 							<td>'.$row['tempat_lahir'].'</td>
 							<td>'.$row['tanggal_lahir'].'</td>
 							<td>'.$row['jenis_kelamin'].'</td>
