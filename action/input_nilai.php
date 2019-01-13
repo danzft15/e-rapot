@@ -667,7 +667,7 @@ include "../action/koneksi.php";
 						<select name="keterangan" class="form-control">
 							<option value="">KETERANGAN</option>
 							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI </option>
 						</select>
 					</div>
 				</div>

@@ -12,7 +12,7 @@
 					<th><center>NISN</th>
 					<th><center>NIS</th>
 					<th><center>NAMA LENGKAP</th>
-					<th><center>TEMPAT LAHIR</th>
+					<th><center>TEMPAT LAHIR </th>
 					<th><center>TANGGAL LAHIR</th>
 					<th><center>JENIS KELAMIN</th>
 					<th><center>KELAS</th>

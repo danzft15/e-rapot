@@ -12,7 +12,7 @@
 					<th><center>TEMPAT LAHIR</th>
 					<th><center>TANGGAL LAHIR</th>
 					<th><center>JENIS KELAMIN</th>
-					<th><center>KELAS</th>
+					<th><center>KELAS </th>
 					<th><center>ALAMAT</th>
 					<th><center>PROVINSI</th>
 					<th><center>STATUS SISWA</th>
