@@ -1,57 +1,91 @@
 <?php
-  
-  $nis = $_SESSION['username'];
+ include "../action/koneksi.php";
+ ?>
 
-?>
-<form class="form-horizontal" method="POST">
-  <table border="1px" id="myTable" class="table table-striped">
-    <thead>
-      <tr>
-        <th><center>NISN</center></th>
-        <th><center>NIS</center></th>
-        <th><center>Nama Lengkap</center></th>
-        <th><center>Tempat Lahir</center></th>
-        <th><center>Tanggal Lahir</center></th>
-        <th><center>Jenis Kelamin</center></th>
-        <th><center>Kelas</center></th>
-        <th><center>Alamat</center></th>
-        <th><center>Provinsi</center></th>
-        <th><center>Status</center></th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
+<<div class="table-responsive">
+    <table class="table table-bordered" id="" width="100%" cellspacing="0">
+  <tr>
+        
+          <th width="50px"><center>NO.</th>
+          <th><center>MATA PELAJARAN</th>
+          <th width="70px"><center>KKM</th>
+          <th width="70px"><center>NILAI</th>
+          <th width="70px"><center>RATA-RATA</th>
+          <th width="130px"><center>KETERANGAN</th>
+          <th><center>CATATAN GURU</th>
 
-      error_reporting();
+  </tr>
 
-        include '../action/koneksi.php';
+  <?php $urut = (isset($_GET['urut']) ? strtolower($_GET['urut']) : NULL);  ?>
+  <?php
+        if($urut){
+          $sql = mysqli_query($koneksi, "SELECT * FROM input_nilai");
+        }else{
+          $sql = mysqli_query($koneksi, "SELECT * FROM input_nilai");
+        }
+        if(mysqli_num_rows($sql) == 0){
+          echo '<tr><td colspan="8">Tidak ada data.</td></tr>';
+        }else{
+          $no = 1;
+          while($row = mysqli_fetch_assoc($sql)){
+            echo '
+            <tr>
+              <td>'.$no.'</td>
+              <td>'.$row['mata_pelajaran'].'</td>
+              <td>'.$row['kkm'].'</td>
+              <td>'.$row['nilai_angka'].'</td>
+              <td>'.$row['predikat'].'</td>
+              <td>'.$row['keterangan'].'</td>
+              <td>'.$row['deskripsi'].'</td>';
+            echo'
+              </td>
+            </tr>
+            ';
+            $no++;
+          }
+        }
+        ?>
+    </table>
+</div>
 
-        $query = mysqli_query($koneksi, "SELECT * FROM siswa WHERE nis='$nis'")or die(mysqli_error());
-                if(mysqli_num_rows($query) == 0){
-                  echo '<tr><td colspan="10"><i>Tidak ada data!</i></td></tr>';
-                }
-                  else
-                {
-                  while($data = mysqli_fetch_array($query)){
-                    echo '<tr  class="header">';
-                    echo '<td>'.$data['nisn'].'</td>';
-                    echo '<td>'.$data['nis'].'</td>';
-                    echo '<td>'.$data['nama_lengkap'].'</td>';
-                    echo '<td>'.$data['tempat_lahir'].'</td>';
-                    echo '<td>'.$data['tanggal_lahir'].'</td>';
-                    echo '<td>'.$data['jenis_kelamin'].'</td>';
-                    echo '<td>'.$data['kelas'].'</td>';
-                    echo '<td>'.$data['alamat'].'</td>';
-                    echo '<td>'.$data['provinsi'].'</td>';
-                    echo '<td>'.$data['status_siswa'].'</td>';
-                    ?>
-                    <?php
-                   
-                  }
-                }
+<<div class="table-responsive">
+    <table class="table table-bordered" id="" width="100%" cellspacing="0">
+  <tr>
+        
+          <th width="200px"><center>BUDI PEKERTI</th>
+          <th width="20px"><center>SAKIT</th>
+          <th width="20px"><center>IZIN</th>
+          <th width="20px"><center>ALFA</th>
 
-            ?>
+  </tr>
 
-    </tbody>
-  </table>
-</form>
+  <?php $urut = (isset($_GET['urut']) ? strtolower($_GET['urut']) : NULL);  ?>
+  <?php
+        if($urut){
+          $sql = mysqli_query($koneksi, "SELECT * FROM input_nilai");
+        }else{
+          $sql = mysqli_query($koneksi, "SELECT * FROM input_nilai");
+        }
+        if(mysqli_num_rows($sql) == 0){
+          echo '<tr><td colspan="8">Tidak ada data.</td></tr>';
+        }else{
+          $no = 1;
+          while($row = mysqli_fetch_assoc($sql)){
+            echo '
+            <tr>
+              
+              <td>'.$row['budi_pekerti'].'</td>
+              <td>'.$row['sakit'].'</td>
+              <td>'.$row['izin'].'</td>
+              <td>'.$row['alfa'].'</td>';
+            echo'
+              </td>
+            </tr>
+            ';
+            $no++;
+          }
+        }
+        ?>
+    </table>
+    <a href="view_rapot.php" target="_BLANK" role="button" class="btn btn-primary pull-right" style="margin-right:16px;margin-bottom:10px;width:150px"><span class="fa fa-print"></span> Cetak Report</a>
+</div>
