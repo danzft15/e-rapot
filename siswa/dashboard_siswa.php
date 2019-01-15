@@ -2,15 +2,16 @@
 
  include "../action/koneksi.php";
 
+ //ketika siswa login, diambil username dari tabel login (di database), lalu diinisialisasikan sebagai nis
  $nis = $_SESSION['username'];
 
- //ngambil id siswa berdasarkan nis yang sedang aktif
+ //nis udah dapet, lalu ngambil id siswa berdasarkan nis yang sedang aktif/login
  $querykode   = "SELECT * FROM siswa WHERE nis='$nis'";
  $cekquery    = mysqli_query($koneksi, $querykode)or die(mysqli_error($koneksi));
  $data        = mysqli_fetch_array($cekquery);
  
+ //dapetin id siswanya diinisialisasikan sbg id_siswa
  $id_siswa    = $data['id'];
- echo $id_siswa;
 ?>
 
 <div class="table-responsive">
@@ -35,8 +36,7 @@
       </thead>
       <tbody>
         <?php
-          //error_reporting();
-          // include '../action/koneksi.php';
+          //
           $query = mysqli_query($koneksi, "SELECT * FROM input_nilai WHERE id_siswa='$id_siswa'")or die(mysqli_error());
                   if(mysqli_num_rows($query) == 0){
                     echo '<tr><td colspan="14"><i>Tidak ada data!</i></td></tr>';

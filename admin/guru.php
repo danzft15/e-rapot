@@ -2,7 +2,7 @@
  include "../action/koneksi.php";
  ?>
  <<div class="table-responsive">
-				<a href="../action/tambah_guru.php" class="btn btn-info btn-lg">
+				<a href="tambah_guru.php" class="btn btn-info btn-lg">
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
 
