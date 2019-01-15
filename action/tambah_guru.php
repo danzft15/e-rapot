@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Mts.Ziyadatul Huda</title>
-  <link rel="shortcut icon" href="img/logo_zihud.jpg">
+  <link rel="shortcut icon" href="../img/logo_zihud.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,6 +27,8 @@
 				$status_pegawai			= $_POST['status_pegawai'];
 				$mata_pelajaran			= $_POST['mata_pelajaran'];
 				$status					= $_POST['status'];
+
+				include 'koneksi.php';
 		
 				$cek = mysqli_query($koneksi, "SELECT * FROM guru");
 				if(mysqli_num_rows($cek) == 0){
@@ -34,6 +36,7 @@
 															VALUES('', '$nuptk', '$nip', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$status_pegawai', '$mata_pelajaran', '$status')") or die(mysqli_error($koneksi));
 												}
 											}
+
 			?>
 			
 			<form class="form-horizontal" action="" method="post">
@@ -127,6 +130,7 @@
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
 						<input type="submit" name="add" class="btn btn-primary" value="TAMBAH">
+						
 						<a href="../admin/index.php?page=guru" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>

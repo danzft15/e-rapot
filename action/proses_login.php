@@ -91,7 +91,7 @@
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
 		 	
-		 	header('../walikelas/halaman_wali_kelas_7.php');
+		 	header('location../walikelas/halaman_wali_kelas_7.php');
 		} 
  
 	}
