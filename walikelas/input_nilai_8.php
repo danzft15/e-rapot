@@ -61,35 +61,23 @@ include "../action/koneksi.php";
 											}
 			?>
 			
-			<form class="form-horizontal" action="" method="post">
-				<input type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
-				<div class="form-group">
-					<label class="col-sm-3 control-label">NISN</label>
-						<div class="col-sm-2">
-							<input type="text" name="nisn" class="form-control" value="<?php echo $row['nisn']; ?>" placeholder="NISN" disabled>
-					</div>
-				</div>
-				<div class="form-group">
-				<label class="col-sm-3 control-label">KELAS</label>
-					<div class="col-sm-3">
-						<select name="kelas" class="form-control" required>
-						<option value="">KELAS</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-				<label class="col-sm-3 control-label">SEMESTER</label>
-					<div class="col-sm-3">
-						<select name="semester" class="form-control" required>
-						<option value="">SEMESTER</option>
-							<option value="ganjil">ganjil</option>
-							<option value="genap">genap</option>
-						</select>
-					</div>
-				</div>
+			<form class="form-horizontal" action="" method="post">     <input
+			type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
+			<div class="form-group">         <label class="col-sm-3 control-
+			label">NISN</label> <div class="col-sm-2">     <input type="text"
+			name="nisn" class="form-control" value="<?php echo $row['nisn'];
+			?>" placeholder="NISN" disabled>         </div>     </div>
+			<div class="form-group">     <label class="col-sm-3 control-
+			label">KELAS</label>         <div class="col-sm-3"> <select
+			name="kelas" class="form-control" required> <option
+			value="">KELAS</option>     <option value="7">7</option>
+			<option value="8">8</option>     <option value="9">9</option>
+			</select>         </div>     </div>     <div class="form-group">
+			<label class="col-sm-3 control-label">SEMESTER</label>
+			<div class="col-sm-3"> <select name="semester" class="form-
+			control" required> <option value="">SEMESTER</option>     <option
+			value="ganjil">ganjil</option>     <option
+			value="genap">genap</option> </select>         </div>     </div>
 
 				<div class="form-group">
 				<label class="col-sm-3 control-label">MATA PELAJARAN</label>
