@@ -304,7 +304,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_qurdis" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_ski" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -326,7 +326,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_ski" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_senbud" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -392,7 +392,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
-						<input type="submit" name="add" class="btn btn-primary" value="INPUT">
+						<input type="submit" class="btn btn-primary" value="INPUT">
 						<a href="../admin/index.php?page=siswa" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>
