@@ -36,7 +36,7 @@
       </thead>
       <tbody>
         <?php
-          //
+          //lalu, dari id_siswa yang didapat tadi, kita bisa mencari nilai siswa dengan id_siswa yang sesuai dengan yang sudah login tadi.
           $query = mysqli_query($koneksi, "SELECT * FROM input_nilai WHERE id_siswa='$id_siswa'")or die(mysqli_error());
                   if(mysqli_num_rows($query) == 0){
                     echo '<tr><td colspan="14"><i>Tidak ada data!</i></td></tr>';

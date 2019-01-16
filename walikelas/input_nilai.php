@@ -30,75 +30,87 @@ include "../action/koneksi.php";
 			<h2>Input Nilai Siswa</h2>
 			<hr />
 			
-			<?php
-
-			$id  = $_GET['id'];
-			
-			$sql = mysqli_query($koneksi, "SELECT * FROM siswa WHERE id='$id'");
-			// $hasil   = mysqli_query($conn, $edit)or die(mysql_error());
-			$row = mysqli_fetch_array($sql);
-			if(isset($_POST['add'])){
-				$kelas				= $_POST['kelas'];
-				$semester			= $_POST['semester'];
-				$mata_pelajaran		= $_POST['mata_pelajaran'];
-				$kkm				= $_POST['kkm'];
-				$nilai_angka		= $_POST['nilai_angka'];
-				$huruf				= $_POST['nilaihuruf'];
-				$predikat			= $_POST['predikat'];
-				$keterangan			= $_POST['keterangan'];
-				$deskripsi			= $_POST['deskripsi'];
-				$budi_pekerti		= $_POST['budi_pekerti'];
-				$sakit				= $_POST['sakit'];
-				$izin				= $_POST['izin'];
-				$alfa				= $_POST['alfa'];
-				$id_siswa			= $_POST['id_siswa'];
-		
-				$cek = mysqli_query($koneksi, "SELECT * FROM input_nilai WHERE kelas='$kelas'");
-				if(mysqli_num_rows($cek) == 0){
-						$insert = mysqli_query($koneksi, "INSERT INTO input_nilai(id, id_siswa, kelas, semester, mata_pelajaran, kkm, nilai_angka, nilai_huruf, predikat, keterangan, deskripsi, budi_pekerti, sakit, izin, alfa)
-															VALUES('', '$kelas', '$semester', $id_siswa', '$mata_pelajaran', '$kkm', '$nilai_angka', '$huruf', '$predikat', '$keterangan', '$deskripsi','$budi_pekerti', '$sakit', '$izin', '$alfa')") or die(mysqli_error($koneksi));
-												}
-											}
-			?>
-			
-			<form class="form-horizontal" action="" method="post">     <input
-			type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
-			<div class="form-group">         <label class="col-sm-3 control-
-			label">NISN</label> <div class="col-sm-2">     <input type="text"
-			name="nisn" class="form-control" value="<?php echo $row['nisn'];
-			?>" placeholder="NISN" disabled>         </div>     </div>
-			<div class="form-group">     <label class="col-sm-3 control-
-			label">KELAS</label>         <div class="col-sm-3"> <select
-			name="kelas" class="form-control" required> <option
-			value="">KELAS</option>     <option value="7">7</option>
-			<option value="8">8</option>     <option value="9">9</option>
-			</select>         </div>     </div>     <div class="form-group">
-			<label class="col-sm-3 control-label">SEMESTER</label>
-			<div class="col-sm-3"> <select name="semester" class="form-
-			control" required> <option value="">SEMESTER</option>     <option
-			value="ganjil">ganjil</option>     <option
-			value="genap">genap</option> </select>         </div>     </div>
-
+			<form class="form-horizontal" action="../action/tambah_nilai.php" method="post">
+				<input type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
 				<div class="form-group">
-				<label class="col-sm-3 control-label">MATA PELAJARAN</label>
-					<div class="col-sm-3">
-						<select name="mata_pelajaran" class="form-control" required>
-							<option value="">MATA PELAJARAN</option>
-							<option value="pai">Pendidikan Agama Islam (PAI)</option>
-							<option value="bindo">Bahasa Indonesia</option>
-							<option value="binggris">Bahasa Inggris</option>
-							<option value="barab">Bahasa Arab</option>
-							<option value="matematika">Matematika</option>
-							<option value="ipa">Ilmu Pengetahuan Alam (IPA)</option>
-							<option value="ips">Ilmpu Pengetahuan Sosial (IPS)</option>
-							<option value="aqidah">Aqidah Akhlak</option>
-							<option value="fiqih">Fiqih</option>
-							<option value="qurdis">Al Qur'an Hadist</option>
-							<option value="ski">Sejarah Kebudayaan Islam</option>
-							<option value="senibudaya">Seni Budaya</option>
-							<option value="penjaskes">Penjaskes</option>
+					<label class="col-sm-3 control-label">NISN</label>
+						<div class="col-sm-2">
+							<input type="text" name="nisn" class="form-control" value="<?php echo $row['nisn']; ?>" placeholder="NISN" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NAMA</label>
+						<div class="col-sm-3">
+							<input type="text" name="nama" class="form-control" value="<?php echo $row['nama_siswa']; ?>" placeholder="NAMA" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KELAS</label>
+						<div class="col-sm-2">
+							<input type="text" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label">SEMESTER</label>
+					<div class="col-sm-2">
+						<select name="semester" class="form-control" required>
+						<option value="">SEMESTER</option>
+							<option value="Ganjil">GANJIL</option>
+							<option value="Genap">GENAP</option>
 						</select>
 					</div>
+				</div>
+
+				<hr \>
+
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN PENDIDIKAN AGAMA ISLAM</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm_pai" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_pai" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="huruf_pai" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN BAHASA INDONESIA</label>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
@@ -123,11 +135,11 @@ include "../action/koneksi.php";
 					<div class="col-sm-2">
 						<select name="predikat" class="form-control">
 							<option value="">PREDIKAT</option>
-							<option value="a">A</option>
-							<option value="b">B</option>
-							<option value="c">C</option>
-							<option value="d">D</option>
-							<option value="e">E</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
 						</select>
 					</div>
 				</div>
@@ -141,19 +153,504 @@ include "../action/koneksi.php";
 						</select>
 					</div>
 				</div>
+				<hr \>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">DESKRIPSI</label>
-					<div class="col-sm-6">
-						<textarea name="deskripsi" class="form-control" placeholder="DESKRIPSI"></textarea>
+				<label class="col-sm-8 control-label">MATA PELAJARAN BAHASA INGRRIS</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
-				<label class="col-sm-3 control-label">BUDI PEKERTI</label>
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN BAHASA ARAB</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN MATEMATIKA</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN ILMU PENGETAHUAN ALAM</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN ILMU PENGETAHUAN SOSIAL</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN AQIDAH AKHLAK</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN FIQIH</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN ALQUR'AN HADIST</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN SEJARAH KEBUDAYAAN ISLAM</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN SENI BUDAYA</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-8 control-label">MATA PELAJARAN PENJASKES</label>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KKM</label>
+					<div class="col-sm-2">
+						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI</label>
+					<div class="col-sm-2">
+						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NILAI HURUF</label>
+					<div class="col-sm-3">
+						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">PREDIKAT</label>
+					<div class="col-sm-2">
+						<select name="predikat" class="form-control">
+							<option value="">PREDIKAT</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">KETERANGAN</label>
+					<div class="col-sm-3">
+						<select name="keterangan" class="form-control">
+							<option value="">KETERANGAN</option>
+							<option value="Terlampaui">TERLAMPAUI</option>
+							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI </option>
+						</select>
+					</div>
+				</div>
+				<hr \>
+				<div class="form-group">
+				<label class="col-sm-6 control-label">UMUM</label>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label">BUDI PEKERTI</label>
+					<div class="col-sm-2">
 						<select name="budi_pekerti" class="form-control" required>
-							<option value="disiplin">Disiplin</option>
-							<option value="kurang_disiplin">Kurang Disiplin</option>
-							<option value="tidak_disiplin">Tidak Disiplin</option>
+							<option value="Disiplin">Disiplin</option>
+							<option value="Kurang Disiplin">Kurang Disiplin</option>
+							<option value="Tidak Disiplin">Tidak Disiplin</option>
 						</select>
 					</div>
 				</div>
