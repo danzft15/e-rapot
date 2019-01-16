@@ -84,29 +84,6 @@ include "../action/koneksi.php";
 						<input type="text" name="huruf_pai" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
-					</div>
-				</div>
 				<hr \>
 
 				<div class="form-group">
@@ -115,42 +92,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_bindo" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_bindo" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_bindo" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -160,42 +114,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_bing" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_bing" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_bing" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -206,42 +137,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_barab" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_barab" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_barab" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -251,32 +159,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_matematika" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_matematika" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
+						<input type="text" name="huruf_matematika" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -287,42 +182,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ipa" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ipa" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_ipa" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -332,42 +204,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ips" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ips" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_ips" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -377,42 +226,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_aqidah" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_aqidah" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_aqidah" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -422,42 +248,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_fiqih" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_fiqih" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_fiqih" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -467,42 +270,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_qurdis" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_qurdis" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_qurdis" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -512,42 +292,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ski" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ski" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_qurdis" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -557,42 +314,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_senbud" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_senbud" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI</option>
-						</select>
+						<input type="text" name="huruf_ski" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -602,42 +336,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_penjaskes" class="form-control" placeholder="KKM">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_angka" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_penjaskes" class="form-control" placeholder="NILAI">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="nilai_huruf" class="form-control" placeholder="NILAI HURUF">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">PREDIKAT</label>
-					<div class="col-sm-2">
-						<select name="predikat" class="form-control">
-							<option value="">PREDIKAT</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="E">E</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">KETERANGAN</label>
-					<div class="col-sm-3">
-						<select name="keterangan" class="form-control">
-							<option value="">KETERANGAN</option>
-							<option value="Terlampaui">TERLAMPAUI</option>
-							<option value="Tidak Terlampaui">TIDAK TERLAMPAUI </option>
-						</select>
+						<input type="text" name="huruf_penjaskes" class="form-control" placeholder="NILAI HURUF">
 					</div>
 				</div>
 				<hr \>
@@ -670,6 +381,12 @@ include "../action/koneksi.php";
 					<label class="col-sm-3 control-label">ALFA</label>
 					<div class="col-sm-2">
 						<input type="number" name="alfa" class="form-control" placeholder="ALFA">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">CATATAN GURU</label>
+					<div class="col-sm-6">
+						<input type="text" name="catatan_guru" class="form-control" placeholder="CATATAN GURU">
 					</div>
 				</div>
 				<div class="form-group">

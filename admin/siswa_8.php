@@ -48,7 +48,7 @@
 						echo '
 							</td>
 							<td>
-								<a href="../action/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
+								<a href="../walikelas/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
 								<a href="../action/hapus_siswa.php?aksi=delete&id='.$row['id'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 							</td>
 						</tr>
