@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Mts.Ziyadatul Huda</title>
-  <link rel="shortcut icon" href="../img/logo_zihud.jpg">
+  <link rel="shortcut icon" href="img/logo_zihud.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,32 +14,7 @@
 		<div class="content">
 			<h2>Tambah Data Guru</h2>
 			<hr />
-			
-			<?php
-			if(isset($_POST['add'])){
-				$nuptk					= $_POST['nuptk'];
-				$nip					= $_POST['nip'];
-				$nama_lengkap			= $_POST['nama_lengkap'];
-				$tempat_lahir			= $_POST['tempat_lahir'];
-				$tanggal_lahir			= $_POST['tanggal_lahir'];
-				$jenis_kelamin			= $_POST['jenis_kelamin'];
-				$alamat					= $_POST['alamat'];
-				$status_pegawai			= $_POST['status_pegawai'];
-				$mata_pelajaran			= $_POST['mata_pelajaran'];
-				$status					= $_POST['status'];
-
-				include 'koneksi.php';
-		
-				$cek = mysqli_query($koneksi, "SELECT * FROM guru");
-				if(mysqli_num_rows($cek) == 0){
-						$insert = mysqli_query($koneksi, "INSERT INTO guru(id, nuptk, nip, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, status_pegawai, mata_pelajaran, status)
-															VALUES('', '$nuptk', '$nip', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$status_pegawai', '$mata_pelajaran', '$status')") or die(mysqli_error($koneksi));
-												}
-											}
-
-			?>
-			
-			<form class="form-horizontal" action="" method="post">
+			<form class="form-horizontal" action="../action/tambah_guru.php" method="post">
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NUPTK</label>
 						<div class="col-sm-3">
@@ -68,7 +42,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">TANGGAL LAHIR</label>
 						<div class="col-sm-3">
-							<input type="text" name="tanggal_lahir" class="form-control" placeholder="TANGGAL LAHIR">
+							<input type="date" name="tanggal_lahir" class="form-control" placeholder="TANGGAL LAHIR">
 						</div>
 				</div>
 				<div class="form-group">
@@ -131,36 +105,12 @@
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">
 						<input type="submit" name="add" class="btn btn-primary" value="TAMBAH">
-						
-						<a href="../admin/index.php?page=guru" class="btn btn-warning">BATAL</a>
+						<a href="index.php?page=guru" class="btn btn-warning">BATAL</a>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
-=======
-<?php
-	
-	include 'koneksi.php';
 
-	$nuptk					= $_POST['nuptk'];
-	$nip					= $_POST['nip'];
-	$nama_lengkap			= $_POST['nama_lengkap'];
-	$tempat_lahir			= $_POST['tempat_lahir'];
-	$tanggal_lahir			= $_POST['tanggal_lahir'];
-	$jenis_kelamin			= $_POST['jenis_kelamin'];
-	$alamat					= $_POST['alamat'];
-	$status_pegawai			= $_POST['status_pegawai'];
-	$mata_pelajaran			= $_POST['mata_pelajaran'];
-	$status					= $_POST['status'];
-	
->>>>>>> 114f07ce3237e565b3ef6912ccf8d0a650eb6098
-
-	$insert = mysqli_query($koneksi, "INSERT INTO guru(id, nuptk, nip, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, status_pegawai, mata_pelajaran, status)VALUES('', '$nuptk', '$nip', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$status_pegawai', '$mata_pelajaran', '$status')") or die(mysqli_error($koneksi));
-
-
-	// echo "<META HTTP-EQUIV='REFRESH' CONTENT ='0; URL=../admin/index.php?page=siswa'>";
-	echo "Berhasil";
-
-
-?>
+</body>
+</html>
