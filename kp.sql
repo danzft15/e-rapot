@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2019 at 07:55 PM
+-- Generation Time: Jan 16, 2019 at 06:24 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -142,7 +142,14 @@ INSERT INTO `login` (`id`, `username`, `password`, `level`, `keterangan`) VALUES
 (5, 'walikelas9', '6e7ff666af42bea2120299a541ab715a', 4, 'walikelas9'),
 (6, 'walikelas7', '6462d52a53b60aa78f2e6bc102c558de', 5, 'walikelas7'),
 (15, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa'),
-(16, '121231750038160455', '639b5e4e626a20117c79441e2d09a0a0', 1, 'siswa');
+(16, '121231750038160455', '639b5e4e626a20117c79441e2d09a0a0', 1, 'siswa'),
+(17, '2016230056', '135d4447d8e8f60e301c9e5ccb34ad14', 1, 'siswa'),
+(18, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa'),
+(19, '2015230016', '7c79faebf28f0eca3422271d1afe9f99', 1, 'siswa'),
+(20, 'walikelas7c', '853ffde5aafc676f8c4a6eeceaaea123', 5, 'c'),
+(21, 'walikelas7a', 'a93c028d66b9f8b38c6f1e14b58e5b84', 5, 'a'),
+(22, 'walikelass', '29d2566bb2cd96e26659f021c8ead9b7', 5, 'b'),
+(23, '2015230098', '277137b82ebcb9a4d1160d76eea79bfc', 1, 'siswa');
 
 -- --------------------------------------------------------
 
@@ -209,7 +216,9 @@ INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_siswa`, `tempat_lahir`, `tanggal
 (8, '48692792', '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF'),
 (9, '5127895', '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF'),
 (10, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '1998-04-07', 'laki-laki', 7, 'Jl. Serdang Raya', 'DKI Jakarta', 'laki-laki'),
-(11, '0041336362', '121231750038160455', 'DECKA ANDASTEFHANA', 'BEKASI', '2004-08-18', 'laki-laki', 7, 'HARAPAN JAYA RT 007/11 NO. 5', 'Kota Bekasi', 'laki-laki');
+(11, '0041336362', '121231750038160455', 'DECKA ANDASTEFHANA', 'BEKASI', '2004-08-18', 'laki-laki', 7, 'HARAPAN JAYA RT 007/11 NO. 5', 'Kota Bekasi', 'laki-laki'),
+(14, '2015230016', '2015230016', 'Gita Fitriana', 'BEKASI', '1997-05-13', 'perempuan', 7, 'Pasir Putih III', 'Kota Bekasi', 'laki-laki'),
+(15, '2015230067', '2015230098', 'Gugun', 'Jakarta', '1997-07-12', 'laki-laki', 7, 'Serdang Raya', 'DKI Jakarta', 'laki-laki');
 
 --
 -- Indexes for dumped tables
@@ -250,16 +259,22 @@ ALTER TABLE `siswa`
 --
 
 --
+-- AUTO_INCREMENT for table `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `input_nilai`
 --
 ALTER TABLE `input_nilai`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `mata_pelajaran`
@@ -271,7 +286,7 @@ ALTER TABLE `mata_pelajaran`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
