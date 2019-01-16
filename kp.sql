@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2019 at 06:24 AM
+-- Generation Time: Jan 16, 2019 at 07:54 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -107,13 +107,11 @@ CREATE TABLE `input_nilai` (
   `penjaskes` int(5) NOT NULL,
   `penjaskes_huruf` varchar(30) NOT NULL,
   `kkm_penjaskes` int(5) NOT NULL,
-  `predikat` varchar(10) NOT NULL,
-  `keterangan` varchar(30) NOT NULL,
-  `deskripsi` varchar(100) NOT NULL,
   `budi_pekerti` varchar(30) NOT NULL,
   `sakit` int(5) NOT NULL,
   `izin` int(5) NOT NULL,
-  `alfa` int(5) NOT NULL
+  `alfa` int(5) NOT NULL,
+  `catatan_guru` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
