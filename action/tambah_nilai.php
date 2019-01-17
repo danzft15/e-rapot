@@ -50,17 +50,24 @@
 	$alfa					= $_POST['alfa'];
 	$catatan_guru			= $_POST['catatan_guru'];
 
+<<<<<<< HEAD
 	if ($pai > $kkm_pai) {
 		$kelas = $kelas + 1;
 	} elseif ($bindo > $kkm_bindo) {
+=======
+	if ($pai > $kkm_pai AND $bindo > $kkm_bindo AND $binggris > $kkm_binggris AND $barab > $kkm_barab AND $matematika > $kkm_matematika AND $ipa > $kkm_ipa AND $IPS > $kkm_ips AND $aqidah > $kkm_aqidah AND) {
+>>>>>>> 59cc61321f31ccfe6fd76a433ba5c2f14939f3ed
 		$kelas = $kelas + 1;
 	} elseif {
 		
 	}
 
+<<<<<<< HEAD
 
 
 	
+=======
+>>>>>>> 59cc61321f31ccfe6fd76a433ba5c2f14939f3ed
 	$simpan	= "INSERT INTO input_nilai(id, nis, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sakit, izin, alfa, catatan_guru) VALUES ('', '$nis', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti', '$sakit', '$izin', '$alfa', '$catatan_guru')";
 	
 	$masuk	= mysqli_query($koneksi,$simpan)or die(mysqli_error($koneksi));
