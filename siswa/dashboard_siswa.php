@@ -126,6 +126,8 @@
       </thead>
     </table>  
     </div>
+    <a href="#" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-print"></span> PRINT </a>
 
     <?php
     }?>

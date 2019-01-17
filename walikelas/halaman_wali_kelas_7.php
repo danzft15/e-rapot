@@ -128,9 +128,9 @@
 						<ul class="submenu">
 
 							<li class="active">
-								<a href="?page=siswa_kelas8" class="dropdo">
+								<a href="?page=siswa_kelas7" class="dropdo">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Data Siswa Kelas 8
+									Data Siswa Kelas 7
 									</span>
 								</a>
 
@@ -154,7 +154,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="home.php">Welcome Wali Kelas 8</a>
+								<a href="home.php">Welcome Wali Kelas 7</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -173,9 +173,6 @@
 
 				if ($page == "siswa_kelas7") {
 						include "../admin/siswa_7.php";
-					}
-					elseif ($page =="siswa_kelas8") {
-						include "../admin/siswa_8.php";
 					}
 
 
