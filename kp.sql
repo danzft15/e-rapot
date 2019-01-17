@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2019 at 07:54 AM
+-- Generation Time: Jan 17, 2019 at 10:08 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -55,7 +55,9 @@ INSERT INTO `guru` (`id`, `nuptk`, `nip`, `nama_lengkap`, `tempat_lahir`, `tangg
 (6, '5834765666210142', '121231750038070006', 'ELIE ROSMAWATI', 'Jakarta', '02/05/1987', 'PEREMPUAN', 'Jl. Pangkalan Jati No. 9', 'NON PNS', ' PGSD/PGMI', 'AKTIF'),
 (7, '6937748651110112', '121231750038080007', 'RACHMATULLAH', 'Bekasi', '05/06/1970', 'LAKI-LAKI', 'Jl. Dr. Ratna, Bekasi', 'NON PNS', 'BAHASA INDONESIA', 'AKTIF'),
 (8, '1458757659110022', '121231750038280008', 'DEDI JUNAEDI, S.Kom', 'Jakarta', '26/01/1979', 'LAKI-LAKI', 'Jl. Pangkalan Jati V', 'NON PNS', 'Teknologi Informasi', 'AKTIF'),
-(9, '0134748650110063', '121231750038040009', 'H. NASRUDIN, S.Pd.I', 'Jakarta', '02/08/1970', 'LAKI-LAKI', 'Jl. Amil Abas Ujung No. 49', 'NON PNS', ' Rumpun Pendidikan Agama Islam', 'AKTIF');
+(9, '0134748650110063', '121231750038040009', 'H. NASRUDIN, S.Pd.I', 'Jakarta', '02/08/1970', 'LAKI-LAKI', 'Jl. Amil Abas Ujung No. 49', 'NON PNS', ' Rumpun Pendidikan Agama Islam', 'AKTIF'),
+(10, '201523001616', '2015230016', 'Gita Fitriana', 'BEKASI', '1998-05-13', 'perempuan', 'Pasir Putih III', 'laki-laki', 'barab', 'laki-laki'),
+(11, '201523001616', '2015230016', 'Gita Fitriana', 'BEKASI', '1998-05-13', 'perempuan', 'Pasir Putih III', 'laki-laki', 'barab', 'laki-laki');
 
 -- --------------------------------------------------------
 
@@ -66,6 +68,7 @@ INSERT INTO `guru` (`id`, `nuptk`, `nip`, `nama_lengkap`, `tempat_lahir`, `tangg
 CREATE TABLE `input_nilai` (
   `id` int(10) NOT NULL,
   `id_siswa` int(10) NOT NULL,
+  `nis` varchar(50) NOT NULL,
   `kelas` int(5) NOT NULL,
   `semester` varchar(10) NOT NULL,
   `pai` int(5) NOT NULL,
@@ -114,6 +117,15 @@ CREATE TABLE `input_nilai` (
   `catatan_guru` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `input_nilai`
+--
+
+INSERT INTO `input_nilai` (`id`, `id_siswa`, `nis`, `kelas`, `semester`, `pai`, `pai_huruf`, `kkm_pai`, `bindo`, `bindo_huruf`, `kkm_bindo`, `binggris`, `binggris_huruf`, `kkm_binggris`, `barab`, `barab_huruf`, `kkm_barab`, `matematika`, `matematika_huruf`, `kkm_matematika`, `ipa`, `ipa_huruf`, `kkm_ipa`, `ips`, `ips_huruf`, `kkm_ips`, `aqidah`, `aqidah_huruf`, `kkm_aqidah`, `fiqih`, `fiqih_huruf`, `kkm_fiqih`, `qurdis`, `qurdis_huruf`, `kkm_qurdis`, `ski`, `ski_huruf`, `kkm_ski`, `senbud`, `senbud_huruf`, `kkm_senbud`, `penjaskes`, `penjaskes_huruf`, `kkm_penjaskes`, `budi_pekerti`, `sakit`, `izin`, `alfa`, `catatan_guru`) VALUES
+(1, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, '', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..'),
+(2, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, 'Delapan Puluh Lima', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..'),
+(3, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, 'Delapan Puluh Lima', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..');
+
 -- --------------------------------------------------------
 
 --
@@ -157,27 +169,28 @@ INSERT INTO `login` (`id`, `username`, `password`, `level`, `keterangan`) VALUES
 
 CREATE TABLE `mata_pelajaran` (
   `id` int(5) NOT NULL,
-  `mata_pelajaran` varchar(50) NOT NULL
+  `mata_pelajaran` varchar(50) NOT NULL,
+  `kkm` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mata_pelajaran`
 --
 
-INSERT INTO `mata_pelajaran` (`id`, `mata_pelajaran`) VALUES
-(1, 'Pendidikan Agama Islam (PAI)'),
-(2, 'Bahasa Indonesia'),
-(3, 'Bahasa Inggris'),
-(4, 'Bahasa Arab'),
-(5, 'Matematika'),
-(6, 'Ilmu Pengetahuan Alam'),
-(7, 'Ilmu Pengetahuan Sosial'),
-(8, 'Aqidah Akhlak'),
-(9, 'Fiqih'),
-(10, 'Alqur\'an Hadist'),
-(11, 'Sejarah Kebudayaan Islam'),
-(12, 'Seni Budaya'),
-(13, 'Penjaskes');
+INSERT INTO `mata_pelajaran` (`id`, `mata_pelajaran`, `kkm`) VALUES
+(1, 'Pendidikan Agama Islam (PAI)', 60),
+(2, 'Bahasa Indonesia', 65),
+(3, 'Bahasa Inggris', 60),
+(4, 'Bahasa Arab', 60),
+(5, 'Matematika', 60),
+(6, 'Ilmu Pengetahuan Alam', 60),
+(7, 'Ilmu Pengetahuan Sosial', 60),
+(8, 'Aqidah Akhlak', 60),
+(9, 'Fiqih', 60),
+(10, 'Alqur\'an Hadist', 60),
+(11, 'Sejarah Kebudayaan Islam', 60),
+(12, 'Seni Budaya', 60),
+(13, 'Penjaskes', 60);
 
 -- --------------------------------------------------------
 
@@ -260,13 +273,13 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `input_nilai`
 --
 ALTER TABLE `input_nilai`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `login`
