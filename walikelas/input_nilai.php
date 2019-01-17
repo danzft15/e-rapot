@@ -45,19 +45,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NIS</label>
 						<div class="col-sm-3">
-							<input type="text" name="nis" class="form-control" value="<?php echo $row['nis']; ?>" placeholder="NIS" disabled>
+							<input type="text" name="nis" class="form-control" value="<?php echo $row['nis']; ?>" placeholder="NIS" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NAMA</label>
 						<div class="col-sm-3">
-							<input type="text" name="nama" class="form-control" value="<?php echo $row['nama_siswa']; ?>" placeholder="NAMA" disabled>
+							<input type="text" name="nama" class="form-control" value="<?php echo $row['nama_siswa']; ?>" placeholder="NAMA" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KELAS</label>
 						<div class="col-sm-2">
-							<input type="hidden	" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
+							<input type="text" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" readonly>
 					</div>
 				</div>
 				<div class="form-group">
@@ -79,19 +79,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_pai" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_pai" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_pai" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_pai" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_pai" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_pai" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -102,19 +102,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_bindo" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_bindo" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_bindo" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_bindo" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_bindo" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_bindo" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -124,19 +124,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_bing" class="form-control" value = "65" placeholder="KKM" disabled>
+						<input type="text" name="kkm_bing" class="form-control" value = "65" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_bing" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_bing" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_bing" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_bing" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -147,19 +147,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_barab" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_barab" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_barab" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_barab" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_barab" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_barab" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -169,19 +169,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_matematika" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_matematika" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_matematika" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_matematika" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_matematika" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_matematika" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -192,19 +192,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ipa" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_ipa" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_ipa" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ipa" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_ipa" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_ipa" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -214,19 +214,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ips" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_ips" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_ips" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ips" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_ips" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_ips" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -236,19 +236,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_aqidah" class="form-control" value = "65" placeholder="KKM" disabled>
+						<input type="text" name="kkm_aqidah" class="form-control" value = "65" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_aqidah" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_aqidah" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_aqidah" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_aqidah" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -258,19 +258,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_fiqih" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_fiqih" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_fiqih" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_fiqih" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_fiqih" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_fiqih" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -280,19 +280,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_qurdis" class="form-control" value = "65" placeholder="KKM" disabled>
+						<input type="text" name="kkm_qurdis" class="form-control" value = "65" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_qurdis" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_qurdis" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_qurdis" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_qurdis" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -302,19 +302,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ski" class="form-control" value = "65" placeholder="KKM" disabled>
+						<input type="text" name="kkm_ski" class="form-control" value = "65" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_ski" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_ski" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_ski" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_ski" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -324,19 +324,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_senbud" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_senbud" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_senbud" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_senbud" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_senbud" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_senbud" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -346,19 +346,19 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_penjaskes" class="form-control" value = "60" placeholder="KKM" disabled>
+						<input type="text" name="kkm_penjaskes" class="form-control" value = "60" placeholder="KKM" readonly>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI</label>
 					<div class="col-sm-2">
-						<input type="text" name="nilai_penjaskes" class="form-control" placeholder="NILAI">
+						<input type="text" name="nilai_penjaskes" class="form-control" placeholder="NILAI" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">NILAI HURUF</label>
 					<div class="col-sm-3">
-						<input type="text" name="huruf_penjaskes" class="form-control" placeholder="NILAI HURUF">
+						<input type="text" name="huruf_penjaskes" class="form-control" placeholder="NILAI HURUF" required>
 					</div>
 				</div>
 				<hr \>
@@ -378,25 +378,25 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">SAKIT</label>
 					<div class="col-sm-2">
-						<input type="number" name="sakit" class="form-control" placeholder="SAKIT">
+						<input type="number" name="sakit" class="form-control" placeholder="SAKIT" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">IZIN</label>
 					<div class="col-sm-2">
-						<input type="number" name="izin" class="form-control" placeholder="IZIN">
+						<input type="number" name="izin" class="form-control" placeholder="IZIN" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ALFA</label>
 					<div class="col-sm-2">
-						<input type="number" name="alfa" class="form-control" placeholder="ALFA">
+						<input type="number" name="alfa" class="form-control" placeholder="ALFA" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">CATATAN GURU</label>
 					<div class="col-sm-6">
-						<input type="text" name="catatan_guru" class="form-control" placeholder="CATATAN GURU">
+						<input type="text" name="catatan_guru" class="form-control" placeholder="CATATAN GURU" required>
 					</div>
 				</div>
 				<div class="form-group">

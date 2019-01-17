@@ -119,7 +119,7 @@
 
 						<ul class="submenu">
 							<li class="active">
-								<a href="#">
+								<a href="index.php?page=nilai">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Lihat Nilai
 								</a>
@@ -166,9 +166,11 @@
 
 			<?php
 
-				if ($page == 'index'){
+				if ($page == 'nilai'){
 					include 'dashboard_siswa.php';
 				}
+
+
 				// if ($page == "siswa_kelas7") {
 				// 		include "siswa/siswa_7.php";
 				// 	}
