@@ -177,18 +177,8 @@
 					elseif ($page =="siswa_kelas8") {
 						include "../admin/siswa_8.php";
 					}
-					elseif ($page =="siswa_kelas9") {
-						include "../admin/siswa_9.php";
-					}
-					elseif ($page =="guru") {
-						include "data/guru.php";
-					}
-					elseif ($page == "pelajaran") {
-						include "data/pelajaran.php";
-					}
-					elseif ($page == "inputnilai") {
-						include "input_nilai.php";
-					}
+
+
 			?>
 			</div><!-- /.main-content -->
 

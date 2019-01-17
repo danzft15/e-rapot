@@ -43,9 +43,9 @@ include "../action/koneksi.php";
 			<form class="form-horizontal" action="../action/tambah_nilai.php" method="post">
 				<input type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
 				<div class="form-group">
-					<label class="col-sm-3 control-label">NISN</label>
-						<div class="col-sm-2">
-							<input type="text" name="nisn" class="form-control" value="<?php echo $row['nisn']; ?>" placeholder="NISN" disabled>
+					<label class="col-sm-3 control-label">NIS</label>
+						<div class="col-sm-3">
+							<input type="text" name="nis" class="form-control" value="<?php echo $row['nis']; ?>" placeholder="NIS" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -57,7 +57,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KELAS</label>
 						<div class="col-sm-2">
-							<input type="hidden" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
+							<input type="hidden	" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
 					</div>
 				</div>
 				<div class="form-group">

@@ -171,23 +171,13 @@
 			<?php
 
 				if ($page == "siswa_kelas7") {
-						include "data/siswa_7.php";
-					}
-					elseif ($page =="siswa_kelas8") {
-						include "data/siswa_8.php";
+						include "../admin/siswa_7.php";
 					}
 					elseif ($page =="siswa_kelas9") {
-						include "data/siswa_9.php";
+						include "../admin/siswa_9.php";
 					}
-					elseif ($page =="guru") {
-						include "data/guru.php";
-					}
-					elseif ($page == "pelajaran") {
-						include "data/pelajaran.php";
-					}
-					elseif ($page == "inputnilai") {
-						include "input_nilai.php";
-					}
+
+
 			?>
 			</div><!-- /.main-content -->
 
