@@ -10,7 +10,7 @@
 	$pai_huruf				= $_POST['huruf_pai'];
 	$kkm_bindo				= $_POST['kkm_bindo'];
 	$bindo 					= $_POST['nilai_bindo'];
-	$huruf_bindo			= $_POST['huruf_bindo'];
+	$bindo_huruf			= $_POST['huruf_bindo'];
 	$kkm_binggris			= $_POST['kkm_bing'];
 	$binggris	    		= $_POST['nilai_bing'];
 	$binggris_huruf		    = $_POST['huruf_bing'];
