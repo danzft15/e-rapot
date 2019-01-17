@@ -3,6 +3,7 @@
 	
 	if(isset($_GET['page'])) $page = $_GET['page']; 
 		    else $page = "index";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

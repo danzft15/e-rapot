@@ -29,7 +29,17 @@ include "../action/koneksi.php";
 		<div class="content">
 			<h2>Input Nilai Siswa</h2>
 			<hr />
-			
+			<?php
+
+				$id_siswa   = $_GET['id'];
+				// echo $id_siswa;
+				include '../action/koneksi.php';
+
+				$tarik 					= "SELECT * FROM siswa WHERE id='$id_siswa'";
+				$cekquery				= mysqli_query($koneksi, $tarik)or die(mysqli_error($koneksi));
+				$row 					= mysqli_fetch_array($cekquery);
+
+			?>			
 			<form class="form-horizontal" action="../action/tambah_nilai.php" method="post">
 				<input type="hidden" name="id_siswa" value="<?php echo $row['id']; ?>">
 				<div class="form-group">

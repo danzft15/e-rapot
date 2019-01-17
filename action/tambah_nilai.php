@@ -2,6 +2,7 @@
 
 	include 'koneksi.php';
 
+	$id_siswa				= $_POST['id_siswa'];
 	$nama					= $_POST['nama'];
 	$kelas					= $_POST['kelas'];
 	$semester				= $_POST['semester'];
@@ -50,7 +51,7 @@
 	$alfa					= $_POST['alfa'];
 	$catatan_guru			= $_POST['catatan_guru'];
 
-	$simpan	= "INSERT INTO input_nilai(id, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sakit, izin, alfa, catatan_guru) VALUES ('', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti', '$sakit', '$izin', '$alfa', '$catatan_guru')";
+	$simpan	= "INSERT INTO input_nilai(id, id_siswa, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sakit, izin, alfa, catatan_guru) VALUES ('', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti', '$sakit', '$izin', '$alfa', '$catatan_guru')";
 	
 	$masuk	= mysqli_query($koneksi,$simpan)or die(mysqli_error($koneksi));
 

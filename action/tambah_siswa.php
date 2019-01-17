@@ -11,18 +11,20 @@
 	$alamat					= $_POST['alamat'];
 	$provinsi   			= $_POST['provinsi'];
 	$status_siswa			= $_POST['status_siswa'];
+	
 	$simpan	= "INSERT INTO siswa(id, nisn, nis, nama_siswa, tempat_lahir, tanggal_lahir, jenis_kelamin, kelas, alamat, provinsi, status_siswa) VALUES ('', '$nisn', '$nis', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$kelas', '$alamat', '$provinsi', '$status_siswa')";
 	
 	$masuk	= mysqli_query($koneksi,$simpan)or die(mysqli_error($koneksi));
+	
 	//narik data terakhir dari tabel siswa
 	$querykode 				= "SELECT * FROM siswa WHERE nama_siswa='$nama_lengkap' ORDER BY id DESC LIMIT 1";
 	$cekquery				= mysqli_query($koneksi, $querykode)or die(mysqli_error($koneksi));
 	$data 					= mysqli_fetch_array($cekquery);
-	// echo $data['id'];
-	// echo '<br>';
-	// echo $data['nama_lengkap'];
+	
+	//menginisialisasikan nis menjadi username dan password
 	$username  = $data['nis'];
 	$password  = md5($data['nis']);
+	
 	//insert siswa into login
 	$save 	= "INSERT INTO login(id, username, password, level, keterangan) VALUES ('', '$username', '$password', '1', 'siswa')";
 	$insert	= mysqli_query($koneksi,$save)or die(mysqli_error($koneksi));
