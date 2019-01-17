@@ -3,7 +3,6 @@
 	include 'koneksi.php';
 
 	$id_siswa				= $_POST['id_siswa'];
-	$nama					= $_POST['nama'];
 	$kelas					= $_POST['kelas'];
 	$semester				= $_POST['semester'];
 	$kkm_pai				= $_POST['kkm_pai'];

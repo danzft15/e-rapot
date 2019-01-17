@@ -57,7 +57,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KELAS</label>
 						<div class="col-sm-2">
-							<input type="text" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
+							<input type="hidden" name="kelas" class="form-control" value="<?php echo $row['kelas']; ?>" placeholder="KELAS" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -79,7 +79,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_pai" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_pai" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -102,7 +102,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_bindo" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_bindo" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -124,7 +124,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_bing" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_bing" class="form-control" value = "65" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -147,7 +147,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_barab" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_barab" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -169,7 +169,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_matematika" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_matematika" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -192,7 +192,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ipa" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ipa" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -214,7 +214,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ips" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ips" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -236,7 +236,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_aqidah" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_aqidah" class="form-control" value = "65" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -258,7 +258,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_fiqih" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_fiqih" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -280,7 +280,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_qurdis" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_qurdis" class="form-control" value = "65" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -302,7 +302,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_ski" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_ski" class="form-control" value = "65" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -324,7 +324,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_senbud" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_senbud" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -346,7 +346,7 @@ include "../action/koneksi.php";
 				<div class="form-group">
 					<label class="col-sm-3 control-label">KKM</label>
 					<div class="col-sm-2">
-						<input type="text" name="kkm_penjaskes" class="form-control" placeholder="KKM">
+						<input type="text" name="kkm_penjaskes" class="form-control" value = "60" placeholder="KKM" disabled>
 					</div>
 				</div>
 				<div class="form-group">
