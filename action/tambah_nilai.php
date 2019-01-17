@@ -50,7 +50,7 @@
 	$alfa					= $_POST['alfa'];
 	$catatan_guru			= $_POST['catatan_guru'];
 
-	if ($pai > $kkm_pai AND $bindo > $kkm_bindo AND $binggris > $kkm_binggris AND $barab > $kkm_barab) {
+	if ($pai > $kkm_pai AND $bindo > $kkm_bindo AND $binggris > $kkm_binggris AND $barab > $kkm_barab AND $matematika > $kkm_matematika AND $ipa > $kkm_ipa AND $IPS > $kkm_ips AND $aqidah > $kkm_aqidah AND) {
 		$kelas = $kelas + 1;
 	} elseif {
 		
