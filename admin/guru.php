@@ -49,7 +49,7 @@
 							<td>'.$row['mata_pelajaran'].'</td>
 							<td>'.$row['status'].'</td>
 							<td><a href="edit_guru.php?NUPTK='.$row['nuptk'].'" title="Rubah Data"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-								<a href="hapus_guru.php?aksi=delete&nuptk='.$row['nuptk'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+								<a href="../action/hapus_guru.php?aksi=delete&nuptk='.$row['nuptk'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
 							<td>';
 
 						echo '

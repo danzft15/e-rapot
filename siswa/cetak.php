@@ -1,4 +1,59 @@
+<head>
+<style type="text/css">
+.table1 {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 50%;
+    border: 1px solid #f2f5f7;
+}
+ 
+.table1 tr th{
+    background: #35A9DB;
+    color: #fff;
+    font-weight: normal;
+}
+ 
+.table1, th, td {
+    padding: 8px 20px;
+    text-align: center;
+}
+ 
+.table1 tr:hover {
+    background-color: #f5f5f5;
+}
+ 
+.table1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
+.font{
+    font-color: black;  
+    font-size: 12pt;
+
+}
+
+</style>
+</head>
+
+<html lang="en">
+<body onload="window.print()">
+
+    <div class="panel panel-default"">
+        <div class="panel-body">
+            <div class="row-table-bordered">
+           <table>
+            <tr>
+            <td>
+                <img src="../img/logo_zihud.jpg" class="img-responsive pull-left" style="max-height:150px;display:inline">
+                <div class="col-md-8">
+                <font size="6"><b><p class="text-center"> MTs Ziyadatul Huda</p></font>
+                <font size="3"><b><p class="text-center">Jl. Pondok Kelapa Selatan RT.03 RW.02 Lampiri, Kelurahan Pondok Kelapa, Kecamatan Duren Sawit, Kota Jakarta Timur 13460</p></font>
+                <b><p class="text-center">Phone : (021) 860-6936</p></b>
+            </div>
+        </div>
+        <hr class="style2">
+        
 <?php
     error_reporting(0);    
 
@@ -16,25 +71,6 @@
         $data           = mysqli_fetch_array($query);
 
 ?>
-
-
-
-
-
-<div class="container">
-
-  <div class="row">
-  <div class="col-sm-12"><br><div class="alert alert-info">
-  <strong>Data Nilai Siswa/i </strong> MTS Ziyadatul Huda
-</div></center></div>
- 
-</div>
-  <div class="panel-group">
-    <div class="panel panel-primary">
-      <div class="panel-heading"> Nilai Siswa </div>
-      <div class="panel-body">
-  
-  
 
 <div class="table-responsive">
     <table class="table table-bordered" id="" width="100%" cellspacing="0">
@@ -163,9 +199,11 @@
       </table>
     </div>
 
-
-    <a href="../siswa/cetak.php" class="btn btn-info btn-lg">
-      <span class="glyphicon glyphicon-print"></span> PRINT </a>
-
     <?php
     }?>
+</table>
+
+<br>
+<br>
+</body>
+</html>

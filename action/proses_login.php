@@ -84,14 +84,14 @@
 		 	header('location: ../walikelas/halaman_wali_kelas_9.php');
 		} 
 
-		elseif ($level==5) {
+		elseif ($level==5 AND $keterangan=='walikelas7') {
 		 	// jika Username dan password ada didalam database daftarkan session
 		 	session_start();
 		 	$_SESSION['username']  = $username;
 		 	$_SESSION['level']     = $level;
 		 	$_SESSION['id']        = session_id();
+		 	header('location: ../walikelas/halaman_wali_kelas_7.php');
 		 	
-		 	header('location../walikelas/halaman_wali_kelas_7.php');
 		} 
  
 	}

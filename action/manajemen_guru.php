@@ -33,8 +33,8 @@
 							<td><center>'.$row['username'].'</td>
 							<td><center>'.$row['password'].'</td>
 							<td><center>'.$row['keterangan'].'</td>
-							<td><center><a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-edit"></span>
-							 Edit</a></td>
+							<td><center><a href="../action/hapus_manajemen.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-trash"></span>
+							 Hapus</a></td>
 						</tr>
 						';
 						$no++;

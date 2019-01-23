@@ -369,9 +369,49 @@ include "../action/koneksi.php";
 				<label class="col-sm-3 control-label">BUDI PEKERTI</label>
 					<div class="col-sm-2">
 						<select name="budi_pekerti" class="form-control" required>
+						<option value="">BUDI PEKERTI</option>
 							<option value="Disiplin">Disiplin</option>
 							<option value="Kurang Disiplin">Kurang Disiplin</option>
 							<option value="Tidak Disiplin">Tidak Disiplin</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label">SIKAP</label>
+					<div class="col-sm-2">
+						<select name="sikap" class="form-control" required>
+						<option value="">SIKAP</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label">KERAJINAN</label>
+					<div class="col-sm-2">
+						<select name="kerajinan" class="form-control" required>
+						<option value="">KERAJINAN</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label">KEBERSIHAN</label>
+					<div class="col-sm-2">
+						<select name="kebersihan" class="form-control" required>
+						<option value="">KEBERSIHAN</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
 						</select>
 					</div>
 				</div>

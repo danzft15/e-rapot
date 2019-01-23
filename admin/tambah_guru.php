@@ -50,8 +50,8 @@
 					<div class="col-sm-2">
 						<select name="jenis_kelamin" class="form-control">
 							<option value="">JENIS KELAMIN</option>
-							<option value="laki-laki">LAKI - LAKI</option>
-							<option value="perempuan">PEREMPUAN</option>
+							<option value="Laki-Laki">LAKI - LAKI</option>
+							<option value="Perempuan">PEREMPUAN</option>
 						</select>
 					</div>
 				</div>
@@ -66,8 +66,8 @@
 					<div class="col-sm-3">
 						<select name="status_pegawai" class="form-control">
 							<option value="">STATUS PEGAWAI</option>
-							<option value="laki-laki">PNS</option>
-							<option value="perempuan">NON-PNS</option>
+							<option value="PNS">PNS</option>
+							<option value="NON-PNS">NON-PNS</option>
 						</select>
 					</div>
 				</div>
@@ -76,19 +76,19 @@
 					<div class="col-sm-3">
 						<select name="mata_pelajaran" class="form-control" required>
 							<option value="">MATA PELAJARAN</option>
-							<option value="pai">Pendidikan Agama Islam (PAI)</option>
-							<option value="bindo">Bahasa Indonesia</option>
-							<option value="binggris">Bahasa Inggris</option>
-							<option value="barab">Bahasa Arab</option>
-							<option value="matematika">Matematika</option>
-							<option value="ipa">Ilmu Pengetahuan Alam (IPA)</option>
-							<option value="ips">Ilmpu Pengetahuan Sosial (IPS)</option>
-							<option value="aqidah">Aqidah Akhlak</option>
-							<option value="fiqih">Fiqih</option>
-							<option value="qurdis">Al Qur'an Hadist</option>
-							<option value="ski">Sejarah Kebudayaan Islam</option>
-							<option value="senibudaya">Seni Budaya</option>
-							<option value="penjaskes">Penjaskes</option>
+							<option value="Pendidikan Agama Islam (PAI)">Pendidikan Agama Islam (PAI)</option>
+							<option value="Bahasa Indonesia">Bahasa Indonesia</option>
+							<option value="Bahasa Inggris">Bahasa Inggris</option>
+							<option value="Bahasa Arab">Bahasa Arab</option>
+							<option value="Matematika">Matematika</option>
+							<option value="Ilmu Pengetahuan Alam (IPA">Ilmu Pengetahuan Alam (IPA)</option>
+							<option value="Ilmpu Pengetahuan Sosial (IPS)">Ilmpu Pengetahuan Sosial (IPS)</option>
+							<option value="Aqidah Akhlak">Aqidah Akhlak</option>
+							<option value="Fiqih">Fiqih</option>
+							<option value="Al Qur'an Hadist">Al Qur'an Hadist</option>
+							<option value="Sejarah Kebudayaan Islam">Sejarah Kebudayaan Islam</option>
+							<option value="Seni Budaya">Seni Budaya</option>
+							<option value="Penjaskes">Penjaskes</option>
 						</select>
 					</div>
 				</div>
@@ -97,8 +97,8 @@
 					<div class="col-sm-2">
 						<select name="status" class="form-control">
 							<option value="">STATUS</option>
-							<option value="laki-laki">AKTIF</option>
-							<option value="perempuan">TIDAK AKTIF</option>
+							<option value="Aktif">AKTIF</option>
+							<option value="Tidak Aktif">TIDAK AKTIF</option>
 						</select>
 					</div>
 				<div class="form-group">

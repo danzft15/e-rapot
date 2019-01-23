@@ -15,9 +15,8 @@
 
 	$insert = mysqli_query($koneksi, "INSERT INTO guru(id, nuptk, nip, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, status_pegawai, mata_pelajaran, status)VALUES('', '$nuptk', '$nip', '$nama_lengkap', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$status_pegawai', '$mata_pelajaran', '$status')") or die(mysqli_error($koneksi));
 
-
-	// echo "<META HTTP-EQUIV='REFRESH' CONTENT ='0; URL=../admin/index.php?page=siswa'>";
-	echo "Berhasil";
+	echo "Data Berhasil Masuk!";
+	echo "<META HTTP-EQUIV='REFRESH' CONTENT ='0; URL=../admin/index.php?page=guru'>";
 
 
 ?>

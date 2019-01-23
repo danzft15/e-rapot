@@ -45,6 +45,9 @@
 	$penjaskes			 	= $_POST['nilai_penjaskes'];
 	$penjaskes_huruf		= $_POST['huruf_penjaskes'];
 	$budi_pekerti			= $_POST['budi_pekerti'];
+	$sikap					= $_POST['sikap'];
+	$kerajinan				= $_POST['kerajinan'];
+ 	$kebersihan 			= $_POST['kebersihan'];
 	$sakit					= $_POST['sakit'];
 	$izin					= $_POST['izin'];
 	$alfa					= $_POST['alfa'];
@@ -56,14 +59,15 @@
 				
 	}
 
-	$simpan	= "INSERT INTO input_nilai(id, nis, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sakit, izin, alfa, catatan_guru) VALUES ('', '$nis', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti', '$sakit', '$izin', '$alfa', '$catatan_guru')";
+	$simpan	= "INSERT INTO input_nilai(id, nis, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sakit, izin, alfa, catatan_guru) VALUES ('', '$nis', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti','$sikap','$kerajinan','$kebersihan', '$sakit', '$izin', '$alfa', '$catatan_guru')";
 	
 	$masuk	= mysqli_query($koneksi,$simpan)or die(mysqli_error($koneksi));
 
-	//die(var_dump($simpan));
+	/*die(var_dump($simpan));*/
 
 	if($masuk) {
 		echo "Berhasil menyimpan nilai ke database";
+		echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/index.php?page=siswa">';
 	}
 
 ?>

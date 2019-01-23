@@ -35,9 +35,9 @@ include "../action/koneksi.php";
 
 			<hr/>
 
-		<p>NOMER INDUK SISWA : </p>
-		<p>NAMA SISWA		 : </p>
-		<p>KELAS			 : </p>
+		<p>NOMER INDUK SISWA : <?php echo'[nis]'; ?> </p>
+		<p>NAMA SISWA		 : <?php echo'[nama_lengkap]'; ?></p>
+		<p>KELAS			 : <?php echo'[kelas]'; ?></p>
 		</div>
 	</div>
 
