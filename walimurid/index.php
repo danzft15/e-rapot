@@ -1,8 +1,13 @@
 <?php
-	include "../action/koneksi.php";
 
-	if(isset($_GET['page'])) $page = $_GET['page']; 
-		    else $page = "index";
+	session_start();
+	
+	if(isset($_SESSION['username'])) {
+
+		include "../action/koneksi.php";
+
+		if(isset($_GET['page'])) $page = $_GET['page']; 
+			    else $page = "index";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -144,7 +149,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Welcome Walimurid</a>
+								<a href="#">Welcome Walimurid <?php echo $_SESSION['username']; ?></a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
@@ -209,3 +214,10 @@
 		<!-- inline scripts related to this page -->
 	</body>
 </html>
+<?php
+}
+else
+  {
+    header("location:../index.php");
+  }
+  ?>
