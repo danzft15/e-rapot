@@ -11,9 +11,9 @@
 <?php 
 include '../action/koneksi.php';
 
-$id_guru = $_GET['id'];
+$id_guru = $_GET['NUPTK'];
 
-$tampilkan 		= "SELECT id, nuptk, nip, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, status_pegawai, mata_pelajaran, status FROM guru WHERE id = '$id_guru'";
+$tampilkan 		= "SELECT * FROM guru WHERE nuptk = '$id_guru'";
 $hasil			= mysqli_query($koneksi, $tampilkan) or die(mysql_error());
 $data 			= mysqli_fetch_array($hasil);
 
@@ -61,56 +61,57 @@ $data 			= mysqli_fetch_array($hasil);
 					<label class="col-sm-3 control-label">JENIS KELAMIN</label>
 					<div class="col-sm-2">
 						<select name="jenis_kelamin" class="form-control" value="<?php echo $data['jenis_kelamin']; ?>">
+						    <option ><?php echo $data['jenis_kelamin']; ?></option>
 							<option value="">JENIS KELAMIN</option>
-							<option value="laki-laki">LAKI - LAKI</option>
-							<option value="perempuan">PEREMPUAN</option>
+							<option value="Laki-Laki">LAKI - LAKI</option>
+							<option value="Perempuan">PEREMPUAN</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ALAMAT</label>
 					<div class="col-sm-6">
-						<textarea name="alamat" class="form-control" value="<?php echo $data['alamat']; ?>" required></textarea>
+						<textarea name="alamat" class="form-control" required> <?php echo $data['alamat']; ?> </textarea>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">STATUS PEGAWAI</label>
 					<div class="col-sm-3">
-						<select name="status_pegawai" class="form-control" value="<?php echo $data['status_pegawai']; ?>" required>
-							<option value="">STATUS PEGAWAI</option>
-							<option value="laki-laki">PNS</option>
-							<option value="perempuan">NON-PNS</option>
+						<select name="status_pegawai" class="form-control" required>
+							<option value=""><?php echo $data['status_pegawai']; ?></option>
+							<option value="PNS">PNS</option>
+							<option value="NON-PNS">NON-PNS</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">MATA PELAJARAN</label>
 					<div class="col-sm-3">
-						<select name="mata_pelajaran" class="form-control" value="<?php echo $data['mata_pelajaran']; ?>" required>
-							<option value="">MATA PELAJARAN</option>
-							<option value="pai">Pendidikan Agama Islam (PAI)</option>
-							<option value="bindo">Bahasa Indonesia</option>
-							<option value="binggris">Bahasa Inggris</option>
-							<option value="barab">Bahasa Arab</option>
-							<option value="matematika">Matematika</option>
-							<option value="ipa">Ilmu Pengetahuan Alam (IPA)</option>
-							<option value="ips">Ilmpu Pengetahuan Sosial (IPS)</option>
-							<option value="aqidah">Aqidah Akhlak</option>
-							<option value="fiqih">Fiqih</option>
-							<option value="qurdis">Al Qur'an Hadist</option>
-							<option value="ski">Sejarah Kebudayaan Islam</option>
-							<option value="senibudaya">Seni Budaya</option>
-							<option value="penjaskes">Penjaskes</option>
+						<select name="mata_pelajaran" class="form-control"  required>
+							<option value=""><?php echo $data['mata_pelajaran']; ?></option>
+							<option value="Pendidikan Agama Islam (PAI)">Pendidikan Agama Islam (PAI)</option>
+							<option value="Bahasa Indonesia">Bahasa Indonesia</option>
+							<option value="Bahasa Inggris">Bahasa Inggris</option>
+							<option value="Bahasa Arab">Bahasa Arab</option>
+							<option value="Matematika">Matematika</option>
+							<option value="Ilmu Pengetahuan Alam (IPA)">Ilmu Pengetahuan Alam (IPA)</option>
+							<option value="Ilmpu Pengetahuan Sosial (IPS)">Ilmpu Pengetahuan Sosial (IPS)</option>
+							<option value="Aqidah Akhlak">Aqidah Akhlak</option>
+							<option value="Fiqih">Fiqih</option>
+							<option value="Al Qur'an Hadist">Al Qur'an Hadist</option>
+							<option value="Sejarah Kebudayaan Islam">Sejarah Kebudayaan Islam</option>
+							<option value="Seni Budaya">Seni Budaya</option>
+							<option value="Penjaskes">Penjaskes</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">STATUS</label>
 					<div class="col-sm-2">
-						<select name="status" class="form-control" value="<?php echo $data['status']; ?>" required>
-							<option value="">STATUS</option>
-							<option value="laki-laki">AKTIF</option>
-							<option value="perempuan">TIDAK AKTIF</option>
+						<select name="status" class="form-control"  required>
+							<option value=""><?php echo $data['status']; ?></option>
+							<option value="Aktif">AKTIF</option>
+							<option value="Tidak Aktif">TIDAK AKTIF</option>
 						</select>
 					</div>
 				<div class="form-group">

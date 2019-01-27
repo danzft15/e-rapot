@@ -114,7 +114,7 @@
 
 						<ul class="submenu">
 							<li class="active">
-								<a href="#">
+								<a href="index.php?page=nilai">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Lihat Nilai
 								</a>
@@ -152,24 +152,9 @@
 
 			<?php
 
-				if ($page == "siswa_kelas7") {
-						include "siswa/siswa_7.php";
-					}
-					elseif ($page =="siswa_kelas8") {
-						include "siswa/siswa_8.php";
-					}
-					elseif ($page =="siswa_kelas9") {
-						include "siswa/siswa_9.php";
-					}
-					elseif ($page =="guru") {
-						include "siswa/guru.php";
-					}
-					elseif ($page == "pelajaran") {
-						include "siswa/pelajaran.php";
-					}
-					elseif ($page == "inputnilai") {
-						include "input_nilai.php";
-					}
+				if ($page == 'nilai'){
+					include 'dashboard_walimurid.php';
+				}
 			?>
 			</div><!-- /.main-content -->
 

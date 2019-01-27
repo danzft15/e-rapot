@@ -1,7 +1,8 @@
 <?php
  include "../action/koneksi.php";
  ?>
- <<div class="table-responsive">
+<!--  <div class="container"> -->
+ <font color="white"><</font><div class="table-responsive">
  <a href="../action/tambah_akses.php" class="btn btn-info btn-lg">
           			<span class="glyphicon glyphicon-plus"></span> Tambah Data 
           		</a>
@@ -33,8 +34,10 @@
 							<td><center>'.$row['username'].'</td>
 							<td><center>'.$row['password'].'</td>
 							<td><center>'.$row['keterangan'].'</td>
-							<td><center><a href="../action/hapus_manajemen.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-trash"></span>
+							<td><center><a href=" ../action/hapus_manajemen.php?id='.$row['id'].'" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-trash"></span>
 							 Hapus</a></td>
+
+							
 						</tr>
 						';
 						$no++;

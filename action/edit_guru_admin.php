@@ -13,7 +13,7 @@ include 'koneksi.php';
 	$mata_pelajaran			= $_POST['mata_pelajaran'];
 	$status					= $_POST['status'];
 
-	$edit 	= "UPDATE guru SET nuptk='$nuptk', nip='$nip',  nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', alamat='$alamat', status_pegawai='$status_pegawai', mata_pelajaran='$mata_pelajaran', status='$status' WHERE id='$id'";
+	$edit 	= "UPDATE guru SET nuptk='$nuptk', nip='$nip',  nama_lengkap='$nama_lengkap', tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', alamat='$alamat', status_pegawai='$status_pegawai', mata_pelajaran='$mata_pelajaran', status='$status' WHERE nuptk='$nuptk'";
 	$editguru	= mysqli_query($koneksi, $edit)or die(mysqli_error());
 
 	if ($editguru)

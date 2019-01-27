@@ -146,6 +146,15 @@
 
 								<b class="arrow"></b>
 							</li>
+
+							<!-- <li class="active">
+								<a href="?page=walimurid">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Walimurid
+								</a>
+
+								<b class="arrow"></b>
+							</li> -->
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
@@ -254,6 +263,9 @@
 					elseif ($page =="cobarapot") {
 						include "../admin/coba_rapot.php";
 					}
+					/*elseif ($page =="walimurid") {
+						include "../admin/walimurid.php";
+					}*/
 
 
 			?>
