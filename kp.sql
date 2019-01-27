@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2019 at 12:55 PM
+-- Generation Time: Jan 27, 2019 at 02:17 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -167,7 +167,8 @@ INSERT INTO `login` (`id`, `username`, `password`, `level`, `keterangan`) VALUES
 (24, 'jordan', 'd16d377af76c99d27093abc22244b342', 5, 'c'),
 (25, '121231750038160452', 'dcdc6f8c5ddeba2fdc9664ef8aa3e963', 1, 'siswa'),
 (26, '2015230078', '6430f6923aeef2bd997f4c10df71898e', 1, 'siswa'),
-(27, '2015230055', 'db2b2d49883dff7698fa27bd630d73b1', 1, 'siswa');
+(27, '2015230055', 'db2b2d49883dff7698fa27bd630d73b1', 1, 'siswa'),
+(28, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa');
 
 -- --------------------------------------------------------
 
@@ -217,28 +218,24 @@ CREATE TABLE `siswa` (
   `kelas` int(2) NOT NULL,
   `alamat` text NOT NULL,
   `provinsi` varchar(50) NOT NULL,
-  `status_siswa` varchar(10) NOT NULL
+  `status_siswa` varchar(10) NOT NULL,
+  `nama_orangtua` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_siswa`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas`, `alamat`, `provinsi`, `status_siswa`) VALUES
-(1, '24671709', '121231750038150437', 'FEBRILIYANTI', 'JAKARTA', '06/02/2003', 'PEREMPUAN', 8, 'JL. SWAKARSA IV RT 009/03, PONDOK KELAPA\r\n', 'DKI Jakarta', 'AKTIF'),
-(2, '26276901', '121231750038150438', 'IKHSAN FATHAN RAMADANI', 'BEKASI', '23/11/2002', 'LAKI-LAKI', 8, 'JL. PONDOK KELAPA NO. 17B\r\n', 'DKI Jakarta', 'AKTIF'),
-(3, '4743122', '121231750038150439', 'JIHAN NURDINI ROHMAH', 'JAKARTA', '25/09/2000', 'PEREMPUAN', 8, 'JL. MELATI II RT 004/02\r\n', 'Jawa Barat', 'AKTIF'),
-(4, '2508611', '121231750038140410', 'FAJAR MEI SYAFRUDIN', 'BANJARNEGARA', '24/05/2000', 'LAKI-LAKI', 9, 'JL. PONDOK KELAPA SELATAN RT. 010/05 NO. 09\r\n', 'DKI Jakarta', 'AKTIF'),
-(5, '18369538', '121231750038140411', 'FARHAN MUZAKI', 'BEKASI', '22/12/2001', 'LAKI-LAKI', 9, 'JL. H. NADIH NO. 07 RT. 003/02', 'JAWA BARAT', 'AKTIF'),
-(6, '21218788', '121231750038140414', 'KHAIRUL ALWAN ALBALDAN', 'JAKARTA', '19/01/2002', 'LAKI-LAKI', 9, 'JL.MASJID I RT 005/12 NO.35B', 'DKI Jakarta', 'AKTIF'),
-(8, '48692792', '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF'),
-(9, '5127895', '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF'),
-(10, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '1998-04-07', 'laki-laki', 7, 'Jl. Serdang Raya', 'DKI Jakarta', 'laki-laki'),
-(11, '0041336362', '121231750038160455', 'DECKA ANDASTEFHANA', 'BEKASI', '2004-08-18', 'laki-laki', 7, 'HARAPAN JAYA RT 007/11 NO. 5', 'Kota Bekasi', 'laki-laki'),
-(14, '2015230016', '2015230016', 'Gita Fitriana', 'BEKASI', '1997-05-13', 'perempuan', 7, 'Pasir Putih III', 'Kota Bekasi', 'laki-laki'),
-(16, '37714990', '121231750038160452', 'Aristi', 'Karanganyar', '2003-05-20', 'perempuan', 7, 'Jl. Pondok Kelapa', 'DKI Jakarta', 'laki-laki'),
-(17, '2015230078', '2015230078', 'Irza Faraby', 'Blitar', '1997-12-12', 'laki-laki', 8, 'Pondok Gede', 'Bekasi', 'laki-laki'),
-(18, '2015230055', '2015230055', 'Aditiya Budi Pratama', 'Jakarta', '1997-05-06', 'laki-laki', 7, 'Jl. Cakung Barat', 'DKI Jakarta', 'laki-laki');
+INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_siswa`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas`, `alamat`, `provinsi`, `status_siswa`, `nama_orangtua`) VALUES
+(1, '24671709', '121231750038150437', 'FEBRILIYANTI', 'JAKARTA', '06/02/2003', 'PEREMPUAN', 8, 'JL. SWAKARSA IV RT 009/03, PONDOK KELAPA\r\n', 'DKI Jakarta', 'AKTIF', ''),
+(2, '26276901', '121231750038150438', 'IKHSAN FATHAN RAMADANI', 'BEKASI', '23/11/2002', 'LAKI-LAKI', 8, 'JL. PONDOK KELAPA NO. 17B\r\n', 'DKI Jakarta', 'AKTIF', ''),
+(3, '4743122', '121231750038150439', 'JIHAN NURDINI ROHMAH', 'JAKARTA', '25/09/2000', 'PEREMPUAN', 8, 'JL. MELATI II RT 004/02\r\n', 'Jawa Barat', 'AKTIF', ''),
+(4, '2508611', '121231750038140410', 'FAJAR MEI SYAFRUDIN', 'BANJARNEGARA', '24/05/2000', 'LAKI-LAKI', 9, 'JL. PONDOK KELAPA SELATAN RT. 010/05 NO. 09\r\n', 'DKI Jakarta', 'AKTIF', ''),
+(5, '18369538', '121231750038140411', 'FARHAN MUZAKI', 'BEKASI', '22/12/2001', 'LAKI-LAKI', 9, 'JL. H. NADIH NO. 07 RT. 003/02', 'JAWA BARAT', 'AKTIF', ''),
+(6, '21218788', '121231750038140414', 'KHAIRUL ALWAN ALBALDAN', 'JAKARTA', '19/01/2002', 'LAKI-LAKI', 9, 'JL.MASJID I RT 005/12 NO.35B', 'DKI Jakarta', 'AKTIF', ''),
+(8, '48692792', '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF', ''),
+(9, '5127895', '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF', ''),
+(19, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '1998-04-07', 'laki-laki', 7, 'Jl. Serdang Raya, Kemayoran JKT Pusat', 'DKI Jakarta', 'Aktif', 'Suryaman');
 
 -- --------------------------------------------------------
 
@@ -314,7 +311,7 @@ ALTER TABLE `input_nilai`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `mata_pelajaran`
@@ -326,7 +323,7 @@ ALTER TABLE `mata_pelajaran`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `walimurid`
