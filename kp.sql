@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2019 at 10:08 AM
+-- Generation Time: Jan 27, 2019 at 12:55 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -53,11 +53,10 @@ INSERT INTO `guru` (`id`, `nuptk`, `nip`, `nama_lengkap`, `tempat_lahir`, `tangg
 (4, '2552745647110062', '121231750038080004', 'H. JUNAEDI, S.Pd.I', 'Jakarta', '20/02/1967', 'LAKI-LAKI', 'Jl. Swakarsa IV', 'NON-PNS', 'Pendidikan Agama Islam (PAI)', 'AKTIF'),
 (5, '6362755657210073', '121231750038090005', 'ST. BADRIAH, S.Pd.I', 'Jakarta', '30/10/1977', 'PEREMPUAN', 'Jl. Kenangan III', 'NON-PNS', 'Pendidikan Agama Islam (PAI)', 'AKTIF'),
 (6, '5834765666210142', '121231750038070006', 'ELIE ROSMAWATI', 'Jakarta', '02/05/1987', 'PEREMPUAN', 'Jl. Pangkalan Jati No. 9', 'NON PNS', ' PGSD/PGMI', 'AKTIF'),
-(7, '6937748651110112', '121231750038080007', 'RACHMATULLAH', 'Bekasi', '05/06/1970', 'LAKI-LAKI', 'Jl. Dr. Ratna, Bekasi', 'NON PNS', 'BAHASA INDONESIA', 'AKTIF'),
 (8, '1458757659110022', '121231750038280008', 'DEDI JUNAEDI, S.Kom', 'Jakarta', '26/01/1979', 'LAKI-LAKI', 'Jl. Pangkalan Jati V', 'NON PNS', 'Teknologi Informasi', 'AKTIF'),
 (9, '0134748650110063', '121231750038040009', 'H. NASRUDIN, S.Pd.I', 'Jakarta', '02/08/1970', 'LAKI-LAKI', 'Jl. Amil Abas Ujung No. 49', 'NON PNS', ' Rumpun Pendidikan Agama Islam', 'AKTIF'),
-(10, '201523001616', '2015230016', 'Gita Fitriana', 'BEKASI', '1998-05-13', 'perempuan', 'Pasir Putih III', 'laki-laki', 'barab', 'laki-laki'),
-(11, '201523001616', '2015230016', 'Gita Fitriana', 'BEKASI', '1998-05-13', 'perempuan', 'Pasir Putih III', 'laki-laki', 'barab', 'laki-laki');
+(14, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '2016-07-31', 'Laki-Laki', 'Serdang', 'PNS', 'Pendidikan Agama Islam (PAI)', 'Aktif'),
+(15, '201523001616', '2015230016', 'Gita Fitriana', 'Jakarta', '1997-05-03', 'Perempuan', '  Jl, Pasir Putih III  ', 'PNS', 'Sejarah Kebudayaan Islam', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -67,7 +66,6 @@ INSERT INTO `guru` (`id`, `nuptk`, `nip`, `nama_lengkap`, `tempat_lahir`, `tangg
 
 CREATE TABLE `input_nilai` (
   `id` int(10) NOT NULL,
-  `id_siswa` int(10) NOT NULL,
   `nis` varchar(50) NOT NULL,
   `kelas` int(5) NOT NULL,
   `semester` varchar(10) NOT NULL,
@@ -78,10 +76,10 @@ CREATE TABLE `input_nilai` (
   `bindo_huruf` varchar(30) NOT NULL,
   `kkm_bindo` int(5) NOT NULL,
   `binggris` int(5) NOT NULL,
-  `binggris_huruf` int(30) NOT NULL,
+  `binggris_huruf` varchar(30) NOT NULL,
   `kkm_binggris` int(5) NOT NULL,
   `barab` int(5) NOT NULL,
-  `barab_huruf` int(30) NOT NULL,
+  `barab_huruf` varchar(30) NOT NULL,
   `kkm_barab` int(5) NOT NULL,
   `matematika` int(5) NOT NULL,
   `matematika_huruf` varchar(30) NOT NULL,
@@ -111,6 +109,9 @@ CREATE TABLE `input_nilai` (
   `penjaskes_huruf` varchar(30) NOT NULL,
   `kkm_penjaskes` int(5) NOT NULL,
   `budi_pekerti` varchar(30) NOT NULL,
+  `sikap` varchar(10) NOT NULL,
+  `kerajinan` varchar(10) NOT NULL,
+  `kebersihan` varchar(10) NOT NULL,
   `sakit` int(5) NOT NULL,
   `izin` int(5) NOT NULL,
   `alfa` int(5) NOT NULL,
@@ -121,10 +122,17 @@ CREATE TABLE `input_nilai` (
 -- Dumping data for table `input_nilai`
 --
 
-INSERT INTO `input_nilai` (`id`, `id_siswa`, `nis`, `kelas`, `semester`, `pai`, `pai_huruf`, `kkm_pai`, `bindo`, `bindo_huruf`, `kkm_bindo`, `binggris`, `binggris_huruf`, `kkm_binggris`, `barab`, `barab_huruf`, `kkm_barab`, `matematika`, `matematika_huruf`, `kkm_matematika`, `ipa`, `ipa_huruf`, `kkm_ipa`, `ips`, `ips_huruf`, `kkm_ips`, `aqidah`, `aqidah_huruf`, `kkm_aqidah`, `fiqih`, `fiqih_huruf`, `kkm_fiqih`, `qurdis`, `qurdis_huruf`, `kkm_qurdis`, `ski`, `ski_huruf`, `kkm_ski`, `senbud`, `senbud_huruf`, `kkm_senbud`, `penjaskes`, `penjaskes_huruf`, `kkm_penjaskes`, `budi_pekerti`, `sakit`, `izin`, `alfa`, `catatan_guru`) VALUES
-(1, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, '', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..'),
-(2, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, 'Delapan Puluh Lima', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..'),
-(3, 0, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, 'Delapan Puluh Lima', 80, 70, 0, 60, 70, 0, 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', 1, 1, 1, 'Belajar Lebih Giat Yaa..');
+INSERT INTO `input_nilai` (`id`, `nis`, `kelas`, `semester`, `pai`, `pai_huruf`, `kkm_pai`, `bindo`, `bindo_huruf`, `kkm_bindo`, `binggris`, `binggris_huruf`, `kkm_binggris`, `barab`, `barab_huruf`, `kkm_barab`, `matematika`, `matematika_huruf`, `kkm_matematika`, `ipa`, `ipa_huruf`, `kkm_ipa`, `ips`, `ips_huruf`, `kkm_ips`, `aqidah`, `aqidah_huruf`, `kkm_aqidah`, `fiqih`, `fiqih_huruf`, `kkm_fiqih`, `qurdis`, `qurdis_huruf`, `kkm_qurdis`, `ski`, `ski_huruf`, `kkm_ski`, `senbud`, `senbud_huruf`, `kkm_senbud`, `penjaskes`, `penjaskes_huruf`, `kkm_penjaskes`, `budi_pekerti`, `sikap`, `kerajinan`, `kebersihan`, `sakit`, `izin`, `alfa`, `catatan_guru`) VALUES
+(1, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 70, 85, '', 80, 70, '0', 60, 70, '0', 65, 75, 'Tujuh Puluh Lima', 70, 70, 'Tujuh Puluh', 70, 80, 'Delapan Puluh', 75, 78, 'Tujuh Puluh Delapan', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 75, 'Tujuh Puluh Lima', 75, 80, 'Delapan Puluh', 80, 80, 'Delapan Puluh', 75, 'Disiplin', '', '', '', 1, 1, 1, 'Belajar Lebih Giat Yaa..'),
+(4, '', 0, 'Ganjil', 75, 'Tujuh Puluh Lima', 0, 85, 'Delapan Puluh Lima', 0, 70, '0', 0, 70, '0', 0, 75, 'Tujuh Puluh Lima', 0, 70, 'Tujuh Puluh', 0, 80, 'Delapan Puluh', 0, 78, 'Tujuh Puluh Delapan', 0, 80, 'Delapan Puluh', 0, 80, 'Delapan Puluh', 0, 75, 'Tujuh Puluh Lima', 0, 80, 'Delapan Puluh', 0, 80, 'Delapan Puluh', 0, 'Tidak Disiplin', '', '', '', 1, 1, 1, 'Oyee'),
+(18, '2015230056', 7, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, '0', 65, 70, '0', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', '', '', '', 1, 1, 1, 'Oyee'),
+(23, '121231750038160452', 8, 'Genap', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', '', '', '', 1, 1, 1, 'Oyeee'),
+(24, '2015230016', 8, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', 'A', 'B', 'A', 1, 1, 1, 'Baik'),
+(25, '2015230098', 8, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', '', '', '', 1, 2, 1, 'Nilai lebih ditingkatkan'),
+(26, '121231750038160453', 8, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', 'A', 'A', 'A', 1, 1, 1, 'Lebih rajin'),
+(27, '121231750038160453', 8, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', 'A', 'A', 'A', 1, 1, 1, 'Lebih rajin'),
+(28, '2015230055', 7, 'Ganjil', 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 65, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 65, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 65, 50, 'Lima Puluh', 65, 50, 'Lima Puluh', 60, 50, 'Lima Puluh', 60, 'Disiplin', 'A', 'B', 'A', 1, 1, 5, 'Tingkat nilai kamu, kurangi bercanda dikelas'),
+(29, '2015230055', 8, 'Ganjil', 75, 'Tujuh Puluh Lima', 60, 85, 'Delapan Puluh Lima', 60, 70, 'Tujuh Puluh', 65, 70, 'Tujuh Puluh', 60, 75, 'Tujuh Puluh Lima', 60, 70, 'Tujuh Puluh', 60, 80, 'Delapan Puluh', 60, 78, 'Tujuh Puluh Delapan', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 65, 75, 'Tujuh Puluh Lima', 65, 80, 'Delapan Puluh', 60, 80, 'Delapan Puluh', 60, 'Disiplin', 'A', 'A', 'A', 1, 1, 1, 'Belajar Lebih Giat Yaa..');
 
 -- --------------------------------------------------------
 
@@ -148,18 +156,18 @@ INSERT INTO `login` (`id`, `username`, `password`, `level`, `keterangan`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 0, 'admin'),
 (2, 'siswa', 'bcd724d15cde8c47650fda962968f102', 1, 'siswa'),
 (3, 'orangtua', '344c999a63cd55b3035cbf76c2691f88', 2, 'orangtua'),
-(4, 'walikelas8a', '4be5a293b3b9bf302d726d386062cd77', 3, 'a'),
+(4, 'walikelas8', '9eaf7b6a21d60ef9d1d0eaf02b15b3ff', 3, 'a'),
 (5, 'walikelas9', '6e7ff666af42bea2120299a541ab715a', 4, 'walikelas9'),
 (6, 'walikelas7', '6462d52a53b60aa78f2e6bc102c558de', 5, 'walikelas7'),
-(15, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa'),
-(16, '121231750038160455', '639b5e4e626a20117c79441e2d09a0a0', 1, 'siswa'),
-(17, '2016230056', '135d4447d8e8f60e301c9e5ccb34ad14', 1, 'siswa'),
-(18, '2015230056', '03aaf24f3b23c4150d75d40b330c9743', 1, 'siswa'),
 (19, '2015230016', '7c79faebf28f0eca3422271d1afe9f99', 1, 'siswa'),
 (20, 'walikelas7c', '853ffde5aafc676f8c4a6eeceaaea123', 5, 'c'),
 (21, 'walikelas7a', 'a93c028d66b9f8b38c6f1e14b58e5b84', 5, 'a'),
 (22, 'walikelass', '29d2566bb2cd96e26659f021c8ead9b7', 5, 'b'),
-(23, '2015230098', '277137b82ebcb9a4d1160d76eea79bfc', 1, 'siswa');
+(23, '2015230098', '277137b82ebcb9a4d1160d76eea79bfc', 1, 'siswa'),
+(24, 'jordan', 'd16d377af76c99d27093abc22244b342', 5, 'c'),
+(25, '121231750038160452', 'dcdc6f8c5ddeba2fdc9664ef8aa3e963', 1, 'siswa'),
+(26, '2015230078', '6430f6923aeef2bd997f4c10df71898e', 1, 'siswa'),
+(27, '2015230055', 'db2b2d49883dff7698fa27bd630d73b1', 1, 'siswa');
 
 -- --------------------------------------------------------
 
@@ -179,16 +187,16 @@ CREATE TABLE `mata_pelajaran` (
 
 INSERT INTO `mata_pelajaran` (`id`, `mata_pelajaran`, `kkm`) VALUES
 (1, 'Pendidikan Agama Islam (PAI)', 60),
-(2, 'Bahasa Indonesia', 65),
-(3, 'Bahasa Inggris', 60),
+(2, 'Bahasa Indonesia', 60),
+(3, 'Bahasa Inggris', 65),
 (4, 'Bahasa Arab', 60),
 (5, 'Matematika', 60),
 (6, 'Ilmu Pengetahuan Alam', 60),
 (7, 'Ilmu Pengetahuan Sosial', 60),
-(8, 'Aqidah Akhlak', 60),
+(8, 'Aqidah Akhlak', 65),
 (9, 'Fiqih', 60),
-(10, 'Alqur\'an Hadist', 60),
-(11, 'Sejarah Kebudayaan Islam', 60),
+(10, 'Alqur\'an Hadist', 65),
+(11, 'Sejarah Kebudayaan Islam', 65),
 (12, 'Seni Budaya', 60),
 (13, 'Penjaskes', 60);
 
@@ -223,13 +231,28 @@ INSERT INTO `siswa` (`id`, `nisn`, `nis`, `nama_siswa`, `tempat_lahir`, `tanggal
 (4, '2508611', '121231750038140410', 'FAJAR MEI SYAFRUDIN', 'BANJARNEGARA', '24/05/2000', 'LAKI-LAKI', 9, 'JL. PONDOK KELAPA SELATAN RT. 010/05 NO. 09\r\n', 'DKI Jakarta', 'AKTIF'),
 (5, '18369538', '121231750038140411', 'FARHAN MUZAKI', 'BEKASI', '22/12/2001', 'LAKI-LAKI', 9, 'JL. H. NADIH NO. 07 RT. 003/02', 'JAWA BARAT', 'AKTIF'),
 (6, '21218788', '121231750038140414', 'KHAIRUL ALWAN ALBALDAN', 'JAKARTA', '19/01/2002', 'LAKI-LAKI', 9, 'JL.MASJID I RT 005/12 NO.35B', 'DKI Jakarta', 'AKTIF'),
-(7, '37714990', '121231750038160452', 'ANNISA ROKHIMAH', 'Karanganyar', '20/05/2003', 'PEREMPUAN', 7, 'JL . Pondok Kelapa ', 'DKI Jakarta', 'AKTIF'),
 (8, '48692792', '121231750038160453', 'ARIEF RACHMAN', 'JAKARTA', '08/12/2004', 'LAKI-LAKI', 7, 'JL. SWAKARSA I RT.004/03', 'DKI Jakarta', 'AKTIF'),
 (9, '5127895', '121231750038160454', 'DEA AMANDA', 'BANDUNG', '23/11/2003', 'PEREMPUAN', 7, 'KOMP DKI BLOK PI/16 RT 009/02', 'DKI Jakarta', 'AKTIF'),
 (10, '2015230056', '2015230056', 'Jordan Nur Akbar', 'Jakarta', '1998-04-07', 'laki-laki', 7, 'Jl. Serdang Raya', 'DKI Jakarta', 'laki-laki'),
 (11, '0041336362', '121231750038160455', 'DECKA ANDASTEFHANA', 'BEKASI', '2004-08-18', 'laki-laki', 7, 'HARAPAN JAYA RT 007/11 NO. 5', 'Kota Bekasi', 'laki-laki'),
 (14, '2015230016', '2015230016', 'Gita Fitriana', 'BEKASI', '1997-05-13', 'perempuan', 7, 'Pasir Putih III', 'Kota Bekasi', 'laki-laki'),
-(15, '2015230067', '2015230098', 'Gugun', 'Jakarta', '1997-07-12', 'laki-laki', 7, 'Serdang Raya', 'DKI Jakarta', 'laki-laki');
+(16, '37714990', '121231750038160452', 'Aristi', 'Karanganyar', '2003-05-20', 'perempuan', 7, 'Jl. Pondok Kelapa', 'DKI Jakarta', 'laki-laki'),
+(17, '2015230078', '2015230078', 'Irza Faraby', 'Blitar', '1997-12-12', 'laki-laki', 8, 'Pondok Gede', 'Bekasi', 'laki-laki'),
+(18, '2015230055', '2015230055', 'Aditiya Budi Pratama', 'Jakarta', '1997-05-06', 'laki-laki', 7, 'Jl. Cakung Barat', 'DKI Jakarta', 'laki-laki');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `walimurid`
+--
+
+CREATE TABLE `walimurid` (
+  `id` int(10) NOT NULL,
+  `nama_walimurid` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `nis` varchar(50) NOT NULL,
+  `nama_siswa` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -266,6 +289,12 @@ ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `walimurid`
+--
+ALTER TABLE `walimurid`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -273,19 +302,19 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `input_nilai`
 --
 ALTER TABLE `input_nilai`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `mata_pelajaran`
@@ -297,7 +326,13 @@ ALTER TABLE `mata_pelajaran`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `walimurid`
+--
+ALTER TABLE `walimurid`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
