@@ -37,7 +37,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">TEMPAT LAHIR</label>
 						<div class="col-sm-3">
-							<input type="tedxt" name="tempat_lahir" class="form-control" placeholder="TEMPAT LAHIR">
+							<input type="tedxt" name="tempat_lahir" class="form-control" placeholder="TEMPAT LAHIR" required>
 						</div>
 				</div>
 				<div class="form-group">
@@ -83,10 +83,17 @@
 					<div class="col-sm-2">
 						<select name="status_siswa" class="form-control">
 							<option value="">STATUS SISWA</option>
-							<option value="laki-laki">AKTIF</option>
-							<option value="perempuan">TIDAK AKTIF</option>
+							<option value="Aktif">AKTIF</option>
+							<option value="Tidak Aktif">TIDAK AKTIF</option>
 						</select>
 					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">NAMA ORANG TUA</label>
+						<div class="col-sm-3">
+							<input type="tedxt" name="nama_orangtua" class="form-control" placeholder="NAMA ORANG TUA" required>
+						</div>
+				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">&nbsp;</label>
 					<div class="col-sm-6">

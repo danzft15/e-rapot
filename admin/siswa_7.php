@@ -12,11 +12,12 @@
 					<th><center>TEMPAT LAHIR</th>
 					<th><center>TANGGAL LAHIR</th>
 					<th><center>JENIS KELAMIN </th>
-					<th><center>KELAS</th>
-					<th><center>ALAMAT</th>
+					<th width="20%"><center>KELAS</th>
+					<th width="30%"><center>ALAMAT</th>
 					<th><center>PROVINSI</th>
-					<th><center>STATUS SISWA</th>
-					<th><center>AKSI</th>
+					<th width="10%"><center>STATUS SISWA</th>
+					<th width="40%"><center>NAMA ORANG TUA</th>
+					<th width="35%"><center>AKSI</th>
 
 	</tr>
 	<?php $urut = (isset($_GET['urut']) ? strtolower($_GET['urut']) : NULL);  ?>
@@ -44,9 +45,11 @@
 							<td>'.$row['alamat'].'</td>
 							<td>'.$row['provinsi'].'</td>
 							<td>'.$row['status_siswa'].'</td>';
+
 							
 						echo '
 							</td>
+							<td>'.$row['nama_orangtua'].'</td>
 							<td>
 								<a href="../walikelas/input_nilai.php?id='.$row['id'].'" title="Input Nilai"><span class="glyphicon glyphicon-plus-sign"></span></a>
 								<a href="../action/hapus_siswa.php?aksi=delete&id='.$row['id'].'" title="Hapus Data" onclick="return confirm(\'Yakin?\')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
