@@ -62,7 +62,11 @@
 				
 	}
 
+<<<<<<< HEAD
 	$simpan	= "INSERT INTO input_nilai(id, nis, kelas, semester, pai, pai_huruf, kkm_pai, bindo, bindo_huruf, kkm_bindo, binggris, binggris_huruf, kkm_binggris, barab, barab_huruf, kkm_barab, matematika, matematika_huruf, kkm_matematika, ipa, ipa_huruf, kkm_ipa, ips, ips_huruf, kkm_ips, aqidah, aqidah_huruf, kkm_aqidah, fiqih, fiqih_huruf, kkm_fiqih, qurdis, qurdis_huruf, kkm_qurdis, ski, ski_huruf, kkm_ski, senbud, senbud_huruf, kkm_senbud, penjaskes, penjaskes_huruf, kkm_penjaskes, budi_pekerti, sikap, kerajinan, kebersihan, sakit, izin, alfa, catatan_guru) VALUES ('', '$nis', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti','$sikap','$kerajinan','$kebersihan', '$sakit', '$izin', '$alfa', '$catatan_guru')";
+=======
+	$simpan	= "INSERT INTO input_nilai(id, nis, kelas, semester, pai, pai_huruf, kkm_pai)VALUES('', '$nis', '$kelas', '$semester', '$pai', '$pai_huruf', '$kkm_pai', '$bindo', '$bindo_huruf', '$kkm_bindo', '$binggris', '$binggris_huruf', '$kkm_binggris', '$barab', '$barab_huruf', '$kkm_barab', '$matematika', '$matematika_huruf', '$kkm_matematika', '$ipa', '$ipa_huruf', '$kkm_ipa', '$ips', '$ips_huruf', '$kkm_ips', '$aqidah', '$aqidah_huruf', '$kkm_aqidah', '$fiqih', '$fiqih_huruf', '$kkm_fiqih', '$qurdis', '$qurdis_huruf', '$kkm_qurdis', '$ski', '$ski_huruf', '$kkm_ski', '$senbud', '$senbud_huruf', '$kkm_senbud', '$penjaskes', '$penjaskes_huruf', '$kkm_penjaskes', '$budi_pekerti','$sikap','$kerajinan','$kebersihan', '$sakit', '$izin', '$alfa', '$catatan_guru')";
+>>>>>>> 07a2af16587d9e1b041993b699185a1ff4cfcd63
 
 	// die(var)
 	
