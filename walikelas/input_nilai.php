@@ -85,13 +85,13 @@ include "../action/koneksi.php";
 				      <tr>
 				        <td>1</td>
 				        <td>Pendidikan Agama Islam</td>
-				        <td><input type="" value ="60" name="kkm_pai" readonly disabled></td>
+				        <td><input type="" value ="60" name="kkm_pai" disabled></td>
 				        <td><input type="" name="pai"></td>
 				      </tr>
 				      <tr>
 				        <td>2</td>
 				        <td>Bahasa Infonesia</td>
-				        <td><input type="" value ="60" name="kkm_bindo" readonly disabled></td>
+				        <td><input type="" value="60" name="kkm_bindo" disabled></td>
 				        <td><input type="" name="bindo"></td>
 				      </tr>
 				    </tbody>
