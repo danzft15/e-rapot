@@ -98,68 +98,68 @@ include "../action/koneksi.php";
 				    <tr>
 				        <td>3</td>
 				        <td>Bahasa Inggris</td>
-				        <td><input type="" value ="65" name="kkm_binggris" readonly disabled></td>
-				        <td><input type="" name="binggris"></td>
+				        <td><input type="" value ="65" name="kkm_bing" readonly disabled></td>
+				        <td><input type="" name="nilai_bing"></td>
 				      </tr>
 				    <tr>
 				        <td>4</td>
 				        <td>Bahasa Arab</td>
 				        <td><input type="" value ="60" name="kkm_barab" readonly disabled></td>
-				        <td><input type="" name="barab"></td>
+				        <td><input type="" name="nilai_barab"></td>
 				    </tr>
 				    <tr>
 				        <td>5</td>
 				        <td>Matematika</td>
 				        <td><input type="" value ="60" name="kkm_matematika" readonly disabled></td>
-				        <td><input type="" name="matematika"></td>
+				        <td><input type="" name="nilai_matematika"></td>
 				      </tr>
 				    <tr>
 				        <td>6</td>
 				        <td>Ilmu Pengetahuan Alam</td>
 				        <td><input type="" value ="60" name="kkm_ipa" readonly disabled></td>
-				        <td><input type="" name="ipa"></td>
+				        <td><input type="" name="nilai_ipa"></td>
 				    </tr>
 				    <tr>
 				        <td>7</td>
 				        <td>Ilmu Pengetahuan Sosial</td>
 				        <td><input type="" value ="60" name="kkm_ips" readonly disabled></td>
-				        <td><input type="" name="ips"></td>
+				        <td><input type="" name="nilai_ips"></td>
 				      </tr>
 				    <tr>
 				        <td>8</td>
 				        <td>Aqidah Akhlak</td>
 				        <td><input type="" value ="65" name="kkm_aqidah" readonly disabled></td>
-				        <td><input type="" name="aqidah"></td>
+				        <td><input type="" name="nilai_aqidah"></td>
 				      </tr>
 				    <tr>
 				        <td>9</td>
 				        <td>Fiqih</td>
 				        <td><input type="" value ="60" name="fiqih" readonly disabled></td>
-				        <td><input type="" name="fiqih"></td>
+				        <td><input type="" name="nilai_fiqih"></td>
 				      </tr>
 				    <tr>
 				        <td>10</td>
 				        <td>Alqur'an Hadist</td>
 				        <td><input type="" value ="65" name="kkm_qurdis" readonly disabled></td>
-				        <td><input type="" name="qurdis"></td>
+				        <td><input type="" name="nilai_qurdis"></td>
 				      </tr>
 				    <tr>
 				        <td>11</td>
 				        <td>Sejarah Kebudayaan Islam</td>
 				        <td><input type="" value ="65" name="kkm_ski" readonly disabled></td>
-				        <td><input type="" name="ski"></td>
+				        <td><input type="" name="nilai_ski"></td>
 				      </tr>
 				    <tr>
 				        <td>12</td>
 				        <td>Seni Budaya</td>
 				        <td><input type="" value ="60" name="kkm_senbud" readonly disabled></td>
-				        <td><input type="" name="senbud"></td>
+				        <td><input type="" name="nilai_senbud"></td>
 				      </tr>
 				    <tr>
 				        <td>13</td>
 				        <td>Penjaskes</td>
 				        <td><input type="" value ="60" name="kkm_penjaskes" readonly disabled></td>
-				        <td><input type="" name="penjaskes"></td>
+				        <td><input type="" name="nilai_penjaskes"></td>
 				      </tr>
 				  </table>
 				<hr \>
