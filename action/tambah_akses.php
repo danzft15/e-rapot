@@ -28,8 +28,12 @@
 			$insert = mysqli_query($koneksi, "INSERT INTO login(id, username, password, level, keterangan)
 															VALUES('', '$username', '$password', '$level', '$keterangan')") or die(mysqli_error($koneksi));
 												
-											}
+			if($insert) {
+		echo "Berhasil menyimpan nilai ke database";
+		echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/index.php?page=manajemenguru">';
+					}								}
 			?>
+
 			
 			<form class="form-horizontal" action="" method="post">
 				<div class="form-group">

@@ -85,10 +85,82 @@ include "../action/koneksi.php";
 				      <tr>
 				        <td>1</td>
 				        <td>Pendidikan Agama Islam</td>
-				        <td><input type="" name="kkm_pai"></td>
+				        <td><input type="" value ="60" name="kkm_pai" readonly disabled></td>
 				        <td><input type="" name="pai"></td>
 				      </tr>
+				      <tr>
+				        <td>2</td>
+				        <td>Bahasa Infonesia</td>
+				        <td><input type="" value ="60" name="kkm_bindo" readonly disabled></td>
+				        <td><input type="" name="bindo"></td>
+				      </tr>
 				    </tbody>
+				    <tr>
+				        <td>3</td>
+				        <td>Bahasa Inggris</td>
+				        <td><input type="" value ="65" name="kkm_binggris" readonly disabled></td>
+				        <td><input type="" name="binggris"></td>
+				      </tr>
+				    <tr>
+				        <td>4</td>
+				        <td>Bahasa Arab</td>
+				        <td><input type="" value ="60" name="kkm_barab" readonly disabled></td>
+				        <td><input type="" name="barab"></td>
+				    </tr>
+				    <tr>
+				        <td>5</td>
+				        <td>Matematika</td>
+				        <td><input type="" value ="60" name="kkm_matematika" readonly disabled></td>
+				        <td><input type="" name="matematika"></td>
+				      </tr>
+				    <tr>
+				        <td>6</td>
+				        <td>Ilmu Pengetahuan Alam</td>
+				        <td><input type="" value ="60" name="kkm_ipa" readonly disabled></td>
+				        <td><input type="" name="ipa"></td>
+				    </tr>
+				    <tr>
+				        <td>7</td>
+				        <td>Ilmu Pengetahuan Sosial</td>
+				        <td><input type="" value ="60" name="kkm_ips" readonly disabled></td>
+				        <td><input type="" name="ips"></td>
+				      </tr>
+				    <tr>
+				        <td>8</td>
+				        <td>Aqidah Akhlak</td>
+				        <td><input type="" value ="65" name="kkm_aqidah" readonly disabled></td>
+				        <td><input type="" name="aqidah"></td>
+				      </tr>
+				    <tr>
+				        <td>9</td>
+				        <td>Fiqih</td>
+				        <td><input type="" value ="60" name="fiqih" readonly disabled></td>
+				        <td><input type="" name="fiqih"></td>
+				      </tr>
+				    <tr>
+				        <td>10</td>
+				        <td>Alqur'an Hadist</td>
+				        <td><input type="" value ="65" name="kkm_qurdis" readonly disabled></td>
+				        <td><input type="" name="qurdis"></td>
+				      </tr>
+				    <tr>
+				        <td>11</td>
+				        <td>Sejarah Kebudayaan Islam</td>
+				        <td><input type="" value ="65" name="kkm_ski" readonly disabled></td>
+				        <td><input type="" name="ski"></td>
+				      </tr>
+				    <tr>
+				        <td>12</td>
+				        <td>Seni Budaya</td>
+				        <td><input type="" value ="60" name="kkm_senbud" readonly disabled></td>
+				        <td><input type="" name="senbud"></td>
+				      </tr>
+				    <tr>
+				        <td>13</td>
+				        <td>Penjaskes</td>
+				        <td><input type="" value ="60" name="kkm_penjaskes" readonly disabled></td>
+				        <td><input type="" name="penjaskes"></td>
+				      </tr>
 				  </table>
 				<hr \>
 				<div class="form-group">
